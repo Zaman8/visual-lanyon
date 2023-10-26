@@ -116,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 48em) {
   .masthead-title {
-    text-align: center;
+    text-align: Left;
   }
   .masthead-title small {
     display: none;
@@ -167,7 +167,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 .sidebar-item {
+  position: absolute;
+  bottom: 0;
   padding: 1rem;
+}
+.sidebar-item p {
+  text-align: center;
 }
 .sidebar-item p:last-child {
   margin-bottom: 0;
@@ -186,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
+  font-weight: bold;
   background-color: rgba(255,255,255,.1);
   border-color: transparent;
 }
@@ -193,6 +199,7 @@ a.sidebar-nav-item:focus {
 @media (min-width: 48em) {
   .sidebar-item {
     padding: 1.5rem;
+    padding-bottom: 0.5rem;
   }
   .sidebar-nav-item {
     padding-left:  1.5rem;
