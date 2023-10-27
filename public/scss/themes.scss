@@ -4,20 +4,27 @@
  * Apply custom color schemes by changing the sidebar background and highlight colors declared here
  */
 
-$background-color: #4b4b4b;
-$highlight-color: #4393ff;
+$sidebar-background-color: #4b4b4b;
+$title-color: #303030;
+$link-color: #268bd2;
 
 
 //Backgound Color
 .sidebar,
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: $background-color;
+  background-color: $sidebar-background-color;
 }
 
 //Highlight Color
 .container a,
 .sidebar-toggle,
 .related-posts li a:hover {
-  color: $highlight-color;
+  color: $link-color;
+}
+
+//Post Title Colors
+.post-title,
+.post-title > a, .masthead-title > a, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+  color: $title-color
 }

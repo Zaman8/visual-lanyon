@@ -14,6 +14,7 @@
  *
  * Modified by @zaman8 under the same license. 
  */
+
 /*
  * Contents
  *
@@ -26,11 +27,14 @@
  * Reverse layout
  * Themes
  */
+
+
 /*
  * Global resets
  *
  * Update the foundational and global aspects of the page.
  */
+
 /* Prevent scroll on narrow devices */
 html,
 body {
@@ -45,8 +49,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #313131;
-  letter-spacing: -0.025rem;
+  letter-spacing: -.025rem;
 }
+
 
 /*
  * Wrapper
@@ -55,20 +60,22 @@ h1, h2, h3, h4, h5, h6 {
  * use an outter wrap to position the sidebar without interferring with the
  * regular page content.
  */
+
 .wrap {
   position: relative;
   width: 100%;
 }
+
 
 /*
  * Container
  *
  * Center the page content.
  */
+
 .container {
   max-width: 28rem;
 }
-
 @media (min-width: 38em) {
   .container {
     max-width: 32rem;
@@ -79,13 +86,16 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 38rem;
   }
 }
+
+
 /*
  * Masthead
  *
  * Super small header above the content for site name and short description.
  */
+
 .masthead {
-  padding-top: 1rem;
+  padding-top:    1rem;
   padding-bottom: 1rem;
   margin-bottom: 3rem;
   border-bottom: 1px solid #eee;
@@ -96,15 +106,18 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
-}
-.masthead-title a {
-  color: #505050;
-}
-.masthead-title small {
-  font-size: 75%;
-  font-weight: 400;
-  color: #c0c0c0;
-  letter-spacing: 0;
+
+  a {
+    color: #505050;
+  }
+
+  small {
+    font-size: 75%;
+    font-weight: 400;
+    color: #c0c0c0;
+    letter-spacing: 0;
+  }
+
 }
 
 @media (max-width: 48em) {
@@ -115,6 +128,8 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 }
+
+
 /*
  * Sidebar
  *
@@ -129,6 +144,7 @@ h1, h2, h3, h4, h5, h6 {
  *
  * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
  */
+
 /* Style and "hide" the sidebar */
 .sidebar {
   position: fixed;
@@ -139,52 +155,51 @@ h1, h2, h3, h4, h5, h6 {
   visibility: hidden;
   overflow-y: auto;
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: 0.875rem; /* 15px */
-  color: rgba(255, 255, 255, 0.6);
+  font-size: .875rem; /* 15px */
+  color: rgba(255,255,255,.6);
   background-color: #202020;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
 }
-
 @media (min-width: 30em) {
   .sidebar {
-    font-size: 0.75rem; /* 14px */
+    font-size: .75rem; /* 14px */
   }
 }
+
 /* Sidebar content */
 .sidebar a {
   font-weight: normal;
   color: #fff;
 }
-
 .sidebar-item {
   position: absolute;
   bottom: 0;
   padding: 1rem;
+
+  p {
+    text-align: center;
+  }
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
-.sidebar-item p {
-  text-align: center;
-}
-.sidebar-item p:last-child {
-  margin-bottom: 0;
-}
+
 
 /* Sidebar nav */
 .sidebar-nav {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255,255,255,.1);
 }
-
 .sidebar-nav-item {
   display: block;
-  padding: 0.5rem 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: .5rem 1rem;
+  border-top: 1px solid rgba(255,255,255,.1);
 }
-
 .sidebar-nav-item.active,
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255,255,255,.1);
   border-color: transparent;
 }
 
@@ -194,30 +209,31 @@ a.sidebar-nav-item:focus {
     padding-bottom: 0.5rem;
   }
   .sidebar-nav-item {
-    padding-left: 1.5rem;
+    padding-left:  1.5rem;
     padding-right: 1.5rem;
   }
 }
+
 /* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
 .sidebar-checkbox {
   position: absolute;
   opacity: 0;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /* Style the `label` that we use to target the `.sidebar-checkbox` */
 .sidebar-toggle {
   position: absolute;
-  top: 0.8rem;
+  top:  .8rem;
   left: 1rem;
   display: flex;
   align-items: center;
-  padding: 0.25rem 0.75rem;
+  padding: .25rem .75rem;
   color: #505050;
   background-color: #fff;
-  border-radius: 0.25rem;
+  border-radius: .25rem;
   cursor: pointer;
 }
 
@@ -247,11 +263,13 @@ a.sidebar-nav-item:focus {
     position: fixed;
   }
 }
+
 @media print {
   .sidebar-toggle {
     display: none;
   }
 }
+
 /* Slide effect
  *
  * Handle the sliding effects of the sidebar and content in one spot, seperate
@@ -264,32 +282,32 @@ a.sidebar-nav-item:focus {
  *
  * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
  */
+
 .wrap,
 .sidebar,
 .sidebar-toggle {
   -webkit-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
-
 .wrap,
 .sidebar-toggle {
-  -webkit-transition: -webkit-transform 0.3s ease-in-out;
-  transition: transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+          transition: transform .3s ease-in-out;
 }
 
 #sidebar-checkbox:checked + .sidebar {
   z-index: 10;
   visibility: visible;
 }
-
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
   -webkit-transform: translateX(14rem);
-  -ms-transform: translateX(14rem);
-  transform: translateX(14rem);
+      -ms-transform: translateX(14rem);
+          transform: translateX(14rem);
 }
+
 
 /*
  * Posts and pages
@@ -297,6 +315,7 @@ a.sidebar-nav-item:focus {
  * Each post is wrapped in `.post` and is used on default and post layouts. Each
  * page is wrapped in `.page` and is only used on the page layout.
  */
+
 .page,
 .post {
   margin-bottom: 4em;
@@ -308,7 +327,6 @@ a.sidebar-nav-item:focus {
 .post-title a {
   color: #303030;
 }
-
 .page-title,
 .post-title {
   margin-top: 0;
@@ -317,7 +335,7 @@ a.sidebar-nav-item:focus {
 /* Meta data line below post title */
 .post-date {
   display: block;
-  margin-top: -0.5rem;
+  margin-top: -.5rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
 }
@@ -328,25 +346,29 @@ a.sidebar-nav-item:focus {
   padding-bottom: 2rem;
   border-top: 1px solid #eee;
 }
-
 .related-posts {
   padding-left: 0;
   list-style: none;
+
+  h3 {
+    margin-top: 0;
+  }
+  li {
+    small {
+    font-size: 75%;
+    color: #999;
+    }
+    a:hover {
+    color: #268bd2;
+    text-decoration: none;
+    }
+    a:hover small {
+    color: inherit;
+    }
 }
-.related-posts h3 {
-  margin-top: 0;
-}
-.related-posts li small {
-  font-size: 75%;
-  color: #999;
-}
-.related-posts li a:hover {
-  color: #268bd2;
-  text-decoration: none;
-}
-.related-posts li a:hover small {
-  color: inherit;
-}
+} 
+
+
 
 /*
  * Pagination
@@ -354,6 +376,7 @@ a.sidebar-nav-item:focus {
  * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
  * there are no more previous or next posts to show.
  */
+
 .pagination {
   overflow: hidden; /* clearfix */
   margin-left: -1rem;
@@ -369,7 +392,6 @@ a.sidebar-nav-item:focus {
   padding: 1rem;
   border: 1px solid #eee;
 }
-
 .pagination-item:first-child {
   margin-bottom: -1px;
 }
@@ -389,26 +411,28 @@ a.pagination-item:hover {
   }
   .pagination-item:first-child {
     margin-bottom: 0;
-    border-top-left-radius: 4px;
+    border-top-left-radius:    4px;
     border-bottom-left-radius: 4px;
   }
   .pagination-item:last-child {
     margin-left: -1px;
-    border-top-right-radius: 4px;
+    border-top-right-radius:    4px;
     border-bottom-right-radius: 4px;
   }
 }
+
+
 /*
  * Reverse layout
  *
  * Flip the orientation of the page by placing the `.sidebar` and sidebar toggle
  * on the right side.
  */
+
 .layout-reverse .sidebar {
   left: auto;
   right: -14rem;
 }
-
 .layout-reverse .sidebar-toggle {
   left: auto;
   right: 1rem;
@@ -418,8 +442,8 @@ a.pagination-item:hover {
 .layout-reverse #sidebar-checkbox:checked ~ .wrap,
 .layout-reverse #sidebar-checkbox:checked ~ .sidebar-toggle {
   -webkit-transform: translateX(-14rem);
-  -ms-transform: translateX(-14rem);
-  transform: translateX(-14rem);
+      -ms-transform: translateX(-14rem);
+          transform: translateX(-14rem);
 }
 
 /*
@@ -428,23 +452,20 @@ a.pagination-item:hover {
  * Make the sidebar content overlay the viewport content instead of pushing it
  * aside when toggled.
  */
+
 .sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
-
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
-  box-shadow: 0 0 0 0.25rem #fff;
+  box-shadow: 0 0 0 .25rem #fff;
 }
-
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: 0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
 }
 
 /* Only one tweak for a reverse layout */
 .layout-reverse.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
-  box-shadow: -0.25rem 0 0.5rem rgba(0, 0, 0, 0.1);
+  box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
-
-/*# sourceMappingURL=lanyon.css.map */
