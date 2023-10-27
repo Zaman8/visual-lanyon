@@ -1,0 +1,18 @@
+/*
+ * Themes
+ *
+ * Apply custom color schemes by changing the sidebar background and highlight colors declared here
+ */
+.sidebar,
+.sidebar-toggle:active,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  background-color: #4b4b4b;
+}
+
+.container a,
+.sidebar-toggle,
+.related-posts li a:hover {
+  color: #4393ff;
+}
+
+/*# sourceMappingURL=themes.css.map */
