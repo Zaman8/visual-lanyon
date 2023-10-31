@@ -1,20 +1,28 @@
 @mixin window_scaling($percent-container) {
     $percent-container: calc($percent-container/100);
     
-    max-width: calc($percent-container * 28rem);
+
+    max-width: calc(calc($percent-container * 28rem) - 2rem);
     @media (min-width: 38em) {
-        max-width: calc($percent-container * 32rem);
+        max-width: calc(calc($percent-container * 32rem) - 2rem);
     }
     @media (min-width: 56em) {
-        max-width: calc($percent-container * 56rem);
+        max-width: calc(calc($percent-container * 56rem) - 2rem);
     }
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .card {
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
     padding: 0.2rem;
-    margin: 1rem;
+    margin-bottom: 1rem;
+
 
     &:hover {
         transition: all .2s ease-in-out; 
@@ -28,6 +36,15 @@
     h1 {
         font-size: 1.5rem;
     }
+
+    max-height: 22rem;
+    @media (min-width: 38em) {
+        max-height: 20rem;
+    }
+    @media (min-width: 56em) {
+        max-height: 14rem;
+    }
+
 }
 
 .wide_card{
@@ -37,3 +54,20 @@
         font-size: 3rem;
     }
 }
+
+.large_card {
+    @include window_scaling(100);
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+.tall_card {
+    @include window_scaling(50);
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+

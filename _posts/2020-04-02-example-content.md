@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Example content
+preview: large_card
 ---
 
 
