@@ -1,8 +1,14 @@
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .card {
   border-radius: 0.5rem;
   box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
   padding: 0.2rem;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 .card:hover {
   transition: all 0.2s ease-in-out;
@@ -10,33 +16,44 @@
 }
 
 .small_card {
-  max-width: 14rem;
+  max-width: 12rem;
+  max-height: 22rem;
 }
 @media (min-width: 38em) {
   .small_card {
-    max-width: 16rem;
+    max-width: 14rem;
   }
 }
 @media (min-width: 56em) {
   .small_card {
-    max-width: 28rem;
+    max-width: 26rem;
   }
 }
 .small_card h1 {
   font-size: 1.5rem;
 }
+@media (min-width: 38em) {
+  .small_card {
+    max-height: 20rem;
+  }
+}
+@media (min-width: 56em) {
+  .small_card {
+    max-height: 14rem;
+  }
+}
 
 .wide_card {
-  max-width: 28rem;
+  max-width: 26rem;
 }
 @media (min-width: 38em) {
   .wide_card {
-    max-width: 32rem;
+    max-width: 30rem;
   }
 }
 @media (min-width: 56em) {
   .wide_card {
-    max-width: 56rem;
+    max-width: 54rem;
   }
 }
 .wide_card h1 {
@@ -44,20 +61,37 @@
 }
 
 .large_card {
-  max-width: 28rem;
+  max-width: 26rem;
 }
 @media (min-width: 38em) {
   .large_card {
-    max-width: 32rem;
+    max-width: 30rem;
   }
 }
 @media (min-width: 56em) {
   .large_card {
-    max-width: 56rem;
+    max-width: 54rem;
   }
 }
 .large_card h1 {
   font-size: 3rem;
+}
+
+.tall_card {
+  max-width: 12rem;
+}
+@media (min-width: 38em) {
+  .tall_card {
+    max-width: 14rem;
+  }
+}
+@media (min-width: 56em) {
+  .tall_card {
+    max-width: 26rem;
+  }
+}
+.tall_card h1 {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=visual-lanyon.css.map */
