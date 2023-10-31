@@ -1,0 +1,46 @@
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
+  padding: 0.2rem;
+  margin: 1rem;
+}
+.card:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.02);
+}
+
+.small_card {
+  max-width: 14rem;
+}
+@media (min-width: 38em) {
+  .small_card {
+    max-width: 16rem;
+  }
+}
+@media (min-width: 56em) {
+  .small_card {
+    max-width: 28rem;
+  }
+}
+.small_card h1 {
+  font-size: 1.5rem;
+}
+
+.wide_card {
+  max-width: 28rem;
+}
+@media (min-width: 38em) {
+  .wide_card {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .wide_card {
+    max-width: 56rem;
+  }
+}
+.wide_card h1 {
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=visual-lanyon.css.map */

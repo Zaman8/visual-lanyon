@@ -1,0 +1,39 @@
+@mixin window_scaling($percent-container) {
+    $percent-container: calc($percent-container/100);
+    
+    max-width: calc($percent-container * 28rem);
+    @media (min-width: 38em) {
+        max-width: calc($percent-container * 32rem);
+    }
+    @media (min-width: 56em) {
+        max-width: calc($percent-container * 56rem);
+    }
+}
+
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
+    padding: 0.2rem;
+    margin: 1rem;
+
+    &:hover {
+        transition: all .2s ease-in-out; 
+        transform: scale(1.02); 
+    }
+}
+
+.small_card {
+    @include window_scaling(50);
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.wide_card{
+    @include window_scaling(100);
+
+    h1 {
+        font-size: 3rem;
+    }
+}
