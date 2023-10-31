@@ -19,11 +19,28 @@
 }
 @media (min-width: 56em) {
   .small_card {
-    max-width: 18rem;
+    max-width: 28rem;
   }
 }
 .small_card h1 {
   font-size: 1.5rem;
+}
+
+.wide_card {
+  max-width: 28rem;
+}
+@media (min-width: 38em) {
+  .wide_card {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .wide_card {
+    max-width: 56rem;
+  }
+}
+.wide_card h1 {
+  font-size: 3rem;
 }
 
 /*# sourceMappingURL=visual-lanyon.css.map */

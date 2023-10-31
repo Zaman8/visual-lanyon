@@ -6,11 +6,7 @@
         max-width: calc($percent-container * 32rem);
     }
     @media (min-width: 56em) {
-        max-width: calc($percent-container * 36rem);
-    }
-
-    h1 {
-        font-size: calc($percent-container * 3rem);
+        max-width: calc($percent-container * 56rem);
     }
 }
 
@@ -28,4 +24,16 @@
 
 .small_card {
     @include window_scaling(50);
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+.wide_card{
+    @include window_scaling(100);
+
+    h1 {
+        font-size: 3rem;
+    }
 }
