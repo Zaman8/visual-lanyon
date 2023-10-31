@@ -43,4 +43,21 @@
   font-size: 3rem;
 }
 
+.large_card {
+  max-width: 28rem;
+}
+@media (min-width: 38em) {
+  .large_card {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .large_card {
+    max-width: 56rem;
+  }
+}
+.large_card h1 {
+  font-size: 3rem;
+}
+
 /*# sourceMappingURL=visual-lanyon.css.map */

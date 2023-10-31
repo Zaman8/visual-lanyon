@@ -37,3 +37,11 @@
         font-size: 3rem;
     }
 }
+
+.large_card{
+    @include window_scaling(100);
+
+    h1 {
+        font-size: 3rem;
+    }
+}
