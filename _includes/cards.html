@@ -14,6 +14,8 @@
           {% assign num_words = 60 %}
         {% when "large_card" %}
           {% assign num_words = 180 %}
+        {% when "tall_card" %}
+          {% assign num_words = 90 %}
         {% else %}
           {% assign num_words = 30 %}
       {% endcase %}
