@@ -5,7 +5,9 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-    {% include small_card.html %}
+
+    {% include {{ post.preview | append: ".html" }} %}
+
   {% endfor %}
 </div>
 
