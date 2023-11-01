@@ -26,7 +26,7 @@ body.light-theme .masthead-title, body.light-theme .masthead-title > a, body.lig
 body.light-theme .masthead-title > small, body.light-theme .post-date, body.light-theme .related-posts li small {
   color: #9a9a9a;
 }
-body.light-theme .card {
+body.light-theme .card, body.light-theme .masthead {
   background-color: #fdfefe;
 }
 body.light-theme {
@@ -53,11 +53,11 @@ body.dark-theme .masthead-title, body.dark-theme .masthead-title > a, body.dark-
 body.dark-theme .masthead-title > small, body.dark-theme .post-date, body.dark-theme .related-posts li small {
   color: #9a9a9a;
 }
-body.dark-theme .card {
+body.dark-theme .card, body.dark-theme .masthead {
   background-color: #0a1c1c;
 }
 body.dark-theme .message {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 body.dark-theme {
   color: #FAF9F6;

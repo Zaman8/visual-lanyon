@@ -2,6 +2,7 @@
   var toggle = document.querySelector('.sidebar-toggle');
   var sidebar = document.querySelector('#sidebar');
   var checkbox = document.querySelector('#sidebar-checkbox');
+  var themeSwitcher = document.getElementById('theme-switcher');
 
   document.addEventListener('click', function(e) {
     var target = e.target;
@@ -12,4 +13,9 @@
 
     checkbox.checked = false;
   }, false);
+
+  themeSwitcher.onclick = function() {
+    if(document.body.getAttribute('class') === 'light-theme') document.body.setAttribute('class', 'dark-theme');
+    else document.body.setAttribute('class', 'light-theme');
+  }
 })(document);

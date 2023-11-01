@@ -1,15 +1,35 @@
-@mixin window_scaling($percent-container) {
-    $percent-container: calc($percent-container/100);
-    
+.theme-switcher {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
 
-    max-width: calc(calc($percent-container * 28rem) - 2rem);
-    @media (min-width: 38em) {
-        max-width: calc(calc($percent-container * 32rem) - 2rem);
-    }
-    @media (min-width: 56em) {
-        max-width: calc(calc($percent-container * 56rem) - 2rem);
+    .icon {
+        background-color: #0000;
+        -webkit-mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
+        mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
+        mask-repeat: no-repeat;
     }
 }
+
+.icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    align-self: center;
+}
+
+.button {
+    background: rgba(0, 0, 0, .1);
+    border-radius: 0.5rem;
+    border-width: 0rem;
+    margin: 0rem;
+}
+
+
+
 
 .posts {
     display: flex;
