@@ -1,23 +1,42 @@
 /*
  * Themes
  *
- * Apply custom color schemes by changing the sidebar background and highlight colors declared here
+ * Apply custom color schemes by changing the sidebar background and highlight colors declared here.
+ * A secondary color theme is also declared here for the purpose of a dark mode for the website.
  */
+/*Light Mode*/
+/*Dark Mode*/
 .sidebar,
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .sidebar-toggle {
+  color: rgba(255, 255, 255, 0.6);
   background-color: #4b4b4b;
 }
 
-.container a,
-.sidebar-toggle,
+.sidebar a {
+  color: #fff;
+}
+
+a,
 .related-posts li a:hover {
   color: #268bd2;
 }
 
-.post-title,
-.post-title > a, .masthead-title > a, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
+.post-title, .page-title .post-title > a,
+.masthead-title, .masthead-title > a, h1, h2, h3, h4, h5, h6 {
   color: #303030;
+}
+
+.masthead-title > small, .post-date, .related-posts li small {
+  color: #9a9a9a;
+}
+
+.card {
+  background-color: #fdfefe;
+}
+
+.body {
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=themes.css.map */

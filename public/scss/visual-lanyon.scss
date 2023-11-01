@@ -31,7 +31,8 @@
 }
 
 .small_card {
-    @include window_scaling(50);
+    //@include window_scaling(50);
+    width: 50%;
 
     h1 {
         font-size: 1.5rem;
@@ -48,24 +49,24 @@
 }
 
 .wide_card{
-    @include window_scaling(100);
-
+    //@include window_scaling(100);
+    width: 100%;
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
 .large_card {
-    @include window_scaling(100);
-
+    //@include window_scaling(100);
+    width: 100%;
     h1 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
 
 .tall_card {
-    @include window_scaling(50);
-
+    //@include window_scaling(50);
+    width: 50%;
     h1 {
         font-size: 1.5rem;
     }
