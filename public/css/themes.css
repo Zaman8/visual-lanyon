@@ -6,37 +6,62 @@
  */
 /*Light Mode*/
 /*Dark Mode*/
-.sidebar,
-.sidebar-toggle:active,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
+body.light-theme .sidebar,
+body.light-theme .sidebar-toggle:active,
+body.light-theme #sidebar-checkbox:checked ~ .sidebar-toggle {
   color: rgba(255, 255, 255, 0.6);
   background-color: #4b4b4b;
 }
-
-.sidebar a {
+body.light-theme .sidebar a {
   color: #fff;
 }
-
-a,
-.related-posts li a:hover {
+body.light-theme p > a,
+body.light-theme .related-posts li a:hover {
   color: #268bd2;
 }
-
-.post-title, .page-title .post-title > a,
-.masthead-title, .masthead-title > a, h1, h2, h3, h4, h5, h6 {
-  color: #303030;
+body.light-theme .post-title, body.light-theme .page-title .post-title h1 a,
+body.light-theme .masthead-title, body.light-theme .masthead-title > a, body.light-theme h1 > a, body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme h4, body.light-theme h5, body.light-theme h6 {
+  color: #303030 !important;
 }
-
-.masthead-title > small, .post-date, .related-posts li small {
+body.light-theme .masthead-title > small, body.light-theme .post-date, body.light-theme .related-posts li small {
   color: #9a9a9a;
 }
-
-.card {
+body.light-theme .card {
   background-color: #fdfefe;
 }
-
-.body {
+body.light-theme {
   background-color: #FFFFFF;
+}
+
+body.dark-theme .sidebar,
+body.dark-theme .sidebar-toggle:active,
+body.dark-theme #sidebar-checkbox:checked ~ .sidebar-toggle {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #5C8374;
+}
+body.dark-theme .sidebar a {
+  color: #fff;
+}
+body.dark-theme p > a,
+body.dark-theme .related-posts li a:hover {
+  color: #268bd2;
+}
+body.dark-theme .post-title, body.dark-theme .page-title .post-title > a,
+body.dark-theme .masthead-title, body.dark-theme .masthead-title > a, body.dark-theme h1 > a, body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+  color: #f7f7f7;
+}
+body.dark-theme .masthead-title > small, body.dark-theme .post-date, body.dark-theme .related-posts li small {
+  color: #9a9a9a;
+}
+body.dark-theme .card {
+  background-color: #0a1c1c;
+}
+body.dark-theme .message {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+body.dark-theme {
+  color: #FAF9F6;
+  background-color: #373c42;
 }
 
 /*# sourceMappingURL=themes.css.map */

@@ -21,6 +21,7 @@ plugins:
 version:             0.1.0
 google_analytics_id: #UA-XXXX-Y
 goatcounter_code: #XXXXX
+colorTheme: light-theme #dark-theme
 
 #Define post default options
 defaults:
