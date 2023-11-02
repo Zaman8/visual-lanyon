@@ -4,9 +4,21 @@
   var checkbox = document.querySelector('#sidebar-checkbox');
   var themeSwitcher = document.getElementById('theme-switcher');
 
-  //set page dark/light mode to last specified by user or default to light
-  var savedtheme = localStorage.getItem('theme') || 'light-theme';
-  document.body.setAttribute('class', savedtheme);
+  //set page dark/light mode to last specified by user or use prefers-colors-theme
+  var settheme = 'light-theme';
+  //determine if user set theme themselves
+  if(localStorage.getItem('theme') === null) {
+    //if no user specified check if they have a prefers-color-scheme of dark
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      settheme = 'dark-theme';
+    } 
+  } else {
+    //if user has specified a theme use that
+    settheme = localStorage.getItem('theme');
+  }
+
+  //set page theme
+  document.body.setAttribute('class', settheme);
 
 
   //add listener event to sidebar toggle
