@@ -1,30 +1,126 @@
 /*
  * Themes
  *
- * Apply custom color schemes by changing the sidebar background and highlight colors declared here
+ * Apply custom color schemes by changing the sidebar background and highlight colors declared here.
+ * A secondary color theme is also declared here for the purpose of a dark mode for the website.
  */
 
-$sidebar-background-color: #4b4b4b;
-$title-color: #303030;
-$link-color: #268bd2;
+ /*Light Mode*/
+$light-background-color: #FFFFFF;
+$light-sidebar-color: #4b4b4b;
+$light-card-color: #fefdfe;
+$light-title-color: #303030;
+$light-alt-title-color: #9a9a9a;
+$light-link-color: #268bd2;
+$light-highlight-background: rgba(0, 0, 0, 0.05);//#f9f9f9;
 
+/*Dark Mode*/
+$dark-background-color: #2d2d2d;
+$dark-sidebar-color: #BB86FC;
+$dark-card-color: #403b40;
+$dark-title-color: #e6e6e6;
+$dark-alt-title-color: #9a9a9a;
+$dark-link-color: #BB86FC;
+$dark-highlight-background: rgba(0, 0, 0, 0.15); //#2b2b2b;
 
-//Backgound Color
-.sidebar,
-.sidebar-toggle:active,
-#sidebar-checkbox:checked ~ .sidebar-toggle {
-  background-color: $sidebar-background-color;
+@mixin colorplacements($background-color, $card-color, $highlight-background, $sidebar-color, $title-color, $alt-title-color, $link-color) {
+  //Sidebar Color
+  .sidebar,
+  .sidebar-toggle:active,
+  .sidebar-toggle::before,
+  #sidebar-checkbox:checked ~ .sidebar-toggle, .icon {
+    color: rgba(255,255,255,.6);
+    background-color: $sidebar-color;
+  }
+
+  .masthead {
+    border-color: $sidebar-color;
+  }
+
+  .sidebar a {
+    color: #fff;
+  }
+
+  //Highlight link color
+  a {
+    color: $link-color;
+  }
+
+  //Post Title Colors
+  .post-title, .page-title
+  .post-title h1 a, .masthead-title, .masthead-title > a, h1 > a, h1, h2, h3, h4, h5, h6 {
+    color: $title-color;
+  }
+
+  .masthead-title > small, .post-date, .related-posts li small {
+    color: $alt-title-color;
+  }
+
+  //Card Colors
+  .card, .masthead {
+    background-color: $card-color;
+  }
+
+  //Site Background Color
+  &, .sidebar-toggle:active:before,
+  //#sidebar-checkbox:focus ~ .sidebar-toggle::before,
+  #sidebar-checkbox:checked ~ .sidebar-toggle::before{
+    background-color: $background-color;
+  }
+
+    //handle highlighted blocks and codes
+  .highlight, .message, blockquote, :not(pre) > code,
+  tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+    background-color: $highlight-background;
+   }
+
+   blockquote {
+    border-color: rgba(0,0,0,0.2);
+   }
 }
 
-//Highlight Color
-.container a,
-.sidebar-toggle,
-.related-posts li a:hover {
-  color: $link-color;
+
+
+
+
+
+
+/*
+* Light Mode Color Specifications
+* 
+*/
+
+body.light-theme {
+  @include colorplacements($light-background-color, $light-card-color, $light-highlight-background, $light-sidebar-color, $light-title-color, $light-alt-title-color, $light-link-color);
 }
 
-//Post Title Colors
-.post-title,
-.post-title > a, .masthead-title > a, .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-  color: $title-color
+
+/*
+* Dark Mode Color Specifications
+* 
+*/
+
+body.dark-theme {
+  @include colorplacements($dark-background-color, $dark-card-color, $dark-highlight-background, $dark-sidebar-color, $dark-title-color, $dark-alt-title-color, $dark-link-color);
+
+
+  //Handle text color changes for dark mode that we likely don't want to change
+  & {
+    color: #e7e7e7;
+  }
+
+  .message, blockquote {
+    color: #adadad;
+  }
+
+  span.pagination-item {
+    border-color: lighten($dark-background-color, 30%);
+    color: lighten($dark-background-color, 30%);
+  }
+
+  //dynamically darken images while in dark-mode
+  img {
+    filter: brightness(80%)
+  }
 }
+

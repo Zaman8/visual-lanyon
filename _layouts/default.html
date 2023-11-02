@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body class="light-theme">
 
     {% include sidebar.html %}
 
@@ -17,6 +17,11 @@
             <small>{{ site.tagline }}</small>
           </h3>
         </div>
+        <label>
+          <button class="button theme-switcher" id="theme-switcher" type="button">
+            <span class="button-wrap icon"></span>
+          </button>
+        </label>
       </div>
 
       <div class="container content">

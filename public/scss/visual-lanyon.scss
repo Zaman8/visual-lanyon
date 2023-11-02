@@ -1,15 +1,37 @@
-@mixin window_scaling($percent-container) {
-    $percent-container: calc($percent-container/100);
-    
+.theme-switcher {
+    position: absolute;
+    top: 1.1rem;
+    right: 1rem;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
 
-    max-width: calc(calc($percent-container * 28rem) - 2rem);
-    @media (min-width: 38em) {
-        max-width: calc(calc($percent-container * 32rem) - 2rem);
-    }
-    @media (min-width: 56em) {
-        max-width: calc(calc($percent-container * 56rem) - 2rem);
+    .icon {
+        -webkit-mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
+        mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
+        mask-repeat: no-repeat;
     }
 }
+
+.icon {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0rem;
+    padding: 0;
+
+}
+
+
+
 
 .posts {
     display: flex;
@@ -20,9 +42,9 @@
 .card {
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
-    padding: 0.2rem;
+    padding: 0.5rem;
     margin-bottom: 1rem;
-
+    overflow: hidden;
 
     &:hover {
         transition: all .2s ease-in-out; 
@@ -30,44 +52,36 @@
     }
 }
 
-.small_card {
-    @include window_scaling(50);
-
+@mixin cardsizing($width, $h1size) {
+    width: $width;
     h1 {
-        font-size: 1.5rem;
+        font-size: $h1size;
     }
+}
 
-    max-height: 22rem;
+.small_card {
+    @include cardsizing(50%, 1.5rem);
+
+    /*max-height: 25rem;
     @media (min-width: 38em) {
         max-height: 20rem;
     }
     @media (min-width: 56em) {
         max-height: 14rem;
-    }
+    }*/
 
 }
 
 .wide_card{
-    @include window_scaling(100);
-
-    h1 {
-        font-size: 3rem;
-    }
+    @include cardsizing(100%, 2.5rem);
 }
 
 .large_card {
-    @include window_scaling(100);
-
-    h1 {
-        font-size: 3rem;
-    }
+    @include cardsizing(100%, 2.5rem);
 }
 
 .tall_card {
-    @include window_scaling(50);
-
-    h1 {
-        font-size: 1.5rem;
-    }
+    //@include window_scaling(50);
+    @include cardsizing(50%, 1.5rem);
 }
 
