@@ -110,7 +110,7 @@ p {
 }
 
 strong {
-  color: #303030;
+  color: inherit;
 }
 
 
@@ -139,7 +139,7 @@ hr {
 abbr {
   font-size: 85%;
   font-weight: bold;
-  color: #555;
+  color: inherit;
   text-transform: uppercase;
 }
 abbr[title] {
@@ -170,7 +170,7 @@ pre {
   white-space: pre-wrap;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f9f9f9;
+  /*background-color: #f9f9f9;*/
 }
 pre code {
   padding: 0;

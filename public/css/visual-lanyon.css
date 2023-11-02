@@ -7,7 +7,6 @@
   width: 32px;
 }
 .theme-switcher .icon {
-  background-color: rgba(0, 0, 0, 0);
   -webkit-mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
   mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
   mask-repeat: no-repeat;
@@ -21,7 +20,7 @@
 }
 
 .button {
-  background: rgba(0, 0, 0, 0.1);
+  background: transparent;
   border-radius: 0.5rem;
   border-width: 0rem;
   margin: 0rem;
@@ -46,7 +45,7 @@
 
 .small_card {
   width: 50%;
-  max-height: 22rem;
+  max-height: 25rem;
 }
 .small_card h1 {
   font-size: 1.5rem;

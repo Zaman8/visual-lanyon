@@ -6,22 +6,29 @@
  */
 /*Light Mode*/
 /*Dark Mode*/
+/*
+* Light Mode Color Specifications
+* 
+*/
 body.light-theme .sidebar,
 body.light-theme .sidebar-toggle:active,
-body.light-theme #sidebar-checkbox:checked ~ .sidebar-toggle {
+body.light-theme #sidebar-checkbox:checked ~ .sidebar-toggle, body.light-theme .icon {
   color: rgba(255, 255, 255, 0.6);
   background-color: #4b4b4b;
+}
+body.light-theme .masthead {
+  border-color: #4b4b4b;
 }
 body.light-theme .sidebar a {
   color: #fff;
 }
 body.light-theme p > a,
-body.light-theme .related-posts li a:hover {
+body.light-theme .related-posts li a {
   color: #268bd2;
 }
 body.light-theme .post-title, body.light-theme .page-title .post-title h1 a,
 body.light-theme .masthead-title, body.light-theme .masthead-title > a, body.light-theme h1 > a, body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme h4, body.light-theme h5, body.light-theme h6 {
-  color: #303030 !important;
+  color: #303030;
 }
 body.light-theme .masthead-title > small, body.light-theme .post-date, body.light-theme .related-posts li small {
   color: #9a9a9a;
@@ -32,36 +39,49 @@ body.light-theme .card, body.light-theme .masthead {
 body.light-theme {
   background-color: #FFFFFF;
 }
+body.light-theme .highlight, body.light-theme .message, body.light-theme blockquote, body.light-theme :not(pre) > code {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 
+/*
+* Dark Mode Color Specifications
+* Same as above with changed variables
+*/
 body.dark-theme .sidebar,
 body.dark-theme .sidebar-toggle:active,
-body.dark-theme #sidebar-checkbox:checked ~ .sidebar-toggle {
+body.dark-theme #sidebar-checkbox:checked ~ .sidebar-toggle, body.dark-theme .icon {
   color: rgba(255, 255, 255, 0.6);
-  background-color: #5C8374;
+  background-color: #BB86FC;
+}
+body.dark-theme .masthead {
+  border-color: #BB86FC;
 }
 body.dark-theme .sidebar a {
   color: #fff;
 }
 body.dark-theme p > a,
-body.dark-theme .related-posts li a:hover {
-  color: #268bd2;
+body.dark-theme .related-posts li a {
+  color: #BB86FC;
 }
 body.dark-theme .post-title, body.dark-theme .page-title .post-title > a,
 body.dark-theme .masthead-title, body.dark-theme .masthead-title > a, body.dark-theme h1 > a, body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
-  color: #f7f7f7;
+  color: #e6e6e6;
 }
 body.dark-theme .masthead-title > small, body.dark-theme .post-date, body.dark-theme .related-posts li small {
   color: #9a9a9a;
 }
-body.dark-theme .card, body.dark-theme .masthead {
-  background-color: #0a1c1c;
+body.dark-theme abbr[title] {
+  border-color: #9a9a9a;
 }
-body.dark-theme .message {
-  background-color: rgba(0, 0, 0, 0.8);
+body.dark-theme .card, body.dark-theme .masthead {
+  background-color: #403b40;
 }
 body.dark-theme {
-  color: #FAF9F6;
-  background-color: #373c42;
+  color: #e7e7e7;
+  background-color: #2d2d2d;
+}
+body.dark-theme .highlight, body.dark-theme .message, body.dark-theme blockquote, body.dark-theme :not(pre) > code {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /*# sourceMappingURL=themes.css.map */
