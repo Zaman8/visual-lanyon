@@ -8,7 +8,7 @@
  /*Light Mode*/
 $light-background-color: #FFFFFF;
 $light-sidebar-color: #4b4b4b;
-$light-card-color: #fdfefe;
+$light-card-color: #fefdfe;
 $light-title-color: #303030;
 $light-alt-title-color: #9a9a9a;
 $light-link-color: #268bd2;
@@ -21,12 +21,13 @@ $dark-card-color: #403b40;
 $dark-title-color: #e6e6e6;
 $dark-alt-title-color: #9a9a9a;
 $dark-link-color: #BB86FC;
-$dark-highlight-background: rgba(0, 0, 0, 0.1); //#2b2b2b;
+$dark-highlight-background: rgba(0, 0, 0, 0.15); //#2b2b2b;
 
 @mixin colorplacements($background-color, $card-color, $highlight-background, $sidebar-color, $title-color, $alt-title-color, $link-color) {
   //Sidebar Color
   .sidebar,
   .sidebar-toggle:active,
+  .sidebar-toggle::before,
   #sidebar-checkbox:checked ~ .sidebar-toggle, .icon {
     color: rgba(255,255,255,.6);
     background-color: $sidebar-color;
@@ -66,10 +67,11 @@ $dark-highlight-background: rgba(0, 0, 0, 0.1); //#2b2b2b;
     background-color: $background-color;
   }
 
-    //handle high lighted blocks and codes
-    .highlight, .message, blockquote, :not(pre) > code {
-      background-color: $highlight-background;
-    }
+    //handle highlighted blocks and codes
+  .highlight, .message, blockquote, :not(pre) > code,
+  tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
+    background-color: $highlight-background;
+   }
 }
 
 
@@ -98,6 +100,10 @@ body.dark-theme {
 
   & {
     color: #e7e7e7;
+  }
+
+  .message, blockquote {
+    color: #adadad;
   }
 }
 
