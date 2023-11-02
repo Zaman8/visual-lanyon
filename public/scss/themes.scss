@@ -6,13 +6,13 @@
  */
 
  /*Light Mode*/
-$background-color: #FFFFFF;
-$sidebar-color: #4b4b4b;
-$card-color: #fdfefe;
-$title-color: #303030;
-$alt-title-color: #9a9a9a;
-$link-color: #268bd2;
-$high-light-background: rgba(0, 0, 0, 0.05);//#f9f9f9;
+$light-background-color: #FFFFFF;
+$light-sidebar-color: #4b4b4b;
+$light-card-color: #fdfefe;
+$light-title-color: #303030;
+$light-alt-title-color: #9a9a9a;
+$light-link-color: #268bd2;
+$light-highlight-background: rgba(0, 0, 0, 0.05);//#f9f9f9;
 
 /*Dark Mode*/
 $dark-background-color: #2d2d2d;
@@ -21,16 +21,9 @@ $dark-card-color: #403b40;
 $dark-title-color: #e6e6e6;
 $dark-alt-title-color: #9a9a9a;
 $dark-link-color: #BB86FC;
-$dark-high-light-background: rgba(0, 0, 0, 0.1); //#2b2b2b;
+$dark-highlight-background: rgba(0, 0, 0, 0.1); //#2b2b2b;
 
-
-
-/*
-* Light Mode Color Specifications
-* 
-*/
-
-body.light-theme {
+@mixin colorplacements($background-color, $card-color, $highlight-background, $sidebar-color, $title-color, $alt-title-color, $link-color) {
   //Sidebar Color
   .sidebar,
   .sidebar-toggle:active,
@@ -75,69 +68,36 @@ body.light-theme {
 
     //handle high lighted blocks and codes
     .highlight, .message, blockquote, :not(pre) > code {
-      background-color: $high-light-background;
+      background-color: $highlight-background;
     }
+}
+
+
+
+
+
+
+
+/*
+* Light Mode Color Specifications
+* 
+*/
+
+body.light-theme {
+  @include colorplacements($light-background-color, $light-card-color, $light-highlight-background, $light-sidebar-color, $light-title-color, $light-alt-title-color, $light-link-color);
 }
 
 
 /*
 * Dark Mode Color Specifications
-* Same as above with changed variables
+* 
 */
 
 body.dark-theme {
-  
-  //Sidebar Color
-  .sidebar,
-  .sidebar-toggle:active,
-  #sidebar-checkbox:checked ~ .sidebar-toggle, .icon {
-    color: rgba(255,255,255,.6);
-    background-color: $dark-sidebar-color;
-  }
+  @include colorplacements($dark-background-color, $dark-card-color, $dark-highlight-background, $dark-sidebar-color, $dark-title-color, $dark-alt-title-color, $dark-link-color);
 
-  .masthead {
-    border-color: $dark-sidebar-color;
-  }
-
-  .sidebar a {
-    color: #fff;
-  }
-
-  //Highlight link Color
-  p > a,
-  .related-posts li a {
-    color: $dark-link-color;
-  }
-
-  //Post Title Colors
-  .post-title, .page-title
-  .post-title > a, .masthead-title, .masthead-title > a, h1 > a, h1, h2, h3, h4, h5, h6 {
-    color: $dark-title-color
-  }
-
-  .masthead-title > small, .post-date, .related-posts li small {
-    color: $dark-alt-title-color;
-  }
-
-  abbr[title] {
-    border-color: $dark-alt-title-color;
-  }
-
-  //Card Colors
-  .card, .masthead {
-    background-color: $dark-card-color;
-  }
-
-  //Site Background Color & normal text recoloration
   & {
     color: #e7e7e7;
-    background-color: $dark-background-color;
   }
-
-  //handle high lighted blocks and codes
-  .highlight, .message, blockquote, :not(pre) > code {
-    background-color: $dark-high-light-background;
-  }
-
 }
 

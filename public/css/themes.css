@@ -45,7 +45,7 @@ body.light-theme .highlight, body.light-theme .message, body.light-theme blockqu
 
 /*
 * Dark Mode Color Specifications
-* Same as above with changed variables
+* 
 */
 body.dark-theme .sidebar,
 body.dark-theme .sidebar-toggle:active,
@@ -63,25 +63,24 @@ body.dark-theme p > a,
 body.dark-theme .related-posts li a {
   color: #BB86FC;
 }
-body.dark-theme .post-title, body.dark-theme .page-title .post-title > a,
+body.dark-theme .post-title, body.dark-theme .page-title .post-title h1 a,
 body.dark-theme .masthead-title, body.dark-theme .masthead-title > a, body.dark-theme h1 > a, body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
   color: #e6e6e6;
 }
 body.dark-theme .masthead-title > small, body.dark-theme .post-date, body.dark-theme .related-posts li small {
   color: #9a9a9a;
 }
-body.dark-theme abbr[title] {
-  border-color: #9a9a9a;
-}
 body.dark-theme .card, body.dark-theme .masthead {
   background-color: #403b40;
 }
 body.dark-theme {
-  color: #e7e7e7;
   background-color: #2d2d2d;
 }
 body.dark-theme .highlight, body.dark-theme .message, body.dark-theme blockquote, body.dark-theme :not(pre) > code {
   background-color: rgba(0, 0, 0, 0.1);
+}
+body.dark-theme {
+  color: #e7e7e7;
 }
 
 /*# sourceMappingURL=themes.css.map */
