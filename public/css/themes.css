@@ -44,6 +44,9 @@ body.light-theme .highlight, body.light-theme .message, body.light-theme blockqu
 body.light-theme tbody tr:nth-child(odd) td, body.light-theme tbody tr:nth-child(odd) th {
   background-color: rgba(0, 0, 0, 0.05);
 }
+body.light-theme blockquote {
+  border-color: rgba(0, 0, 0, 0.2);
+}
 
 /*
 * Dark Mode Color Specifications
@@ -83,11 +86,17 @@ body.dark-theme .highlight, body.dark-theme .message, body.dark-theme blockquote
 body.dark-theme tbody tr:nth-child(odd) td, body.dark-theme tbody tr:nth-child(odd) th {
   background-color: rgba(0, 0, 0, 0.15);
 }
+body.dark-theme blockquote {
+  border-color: rgba(0, 0, 0, 0.2);
+}
 body.dark-theme {
   color: #e7e7e7;
 }
 body.dark-theme .message, body.dark-theme blockquote {
   color: #adadad;
+}
+body.dark-theme img {
+  filter: brightness(80%);
 }
 
 /*# sourceMappingURL=themes.css.map */

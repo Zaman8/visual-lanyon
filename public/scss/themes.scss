@@ -72,6 +72,10 @@ $dark-highlight-background: rgba(0, 0, 0, 0.15); //#2b2b2b;
   tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
     background-color: $highlight-background;
    }
+
+   blockquote {
+    border-color: rgba(0,0,0,0.2);
+   }
 }
 
 
@@ -98,12 +102,19 @@ body.light-theme {
 body.dark-theme {
   @include colorplacements($dark-background-color, $dark-card-color, $dark-highlight-background, $dark-sidebar-color, $dark-title-color, $dark-alt-title-color, $dark-link-color);
 
+
+  //Handle text color changes that are unlikely to change
   & {
     color: #e7e7e7;
   }
 
   .message, blockquote {
     color: #adadad;
+  }
+
+  //dynamically darken images while in dark-mode
+  img {
+    filter: brightness(80%)
   }
 }
 

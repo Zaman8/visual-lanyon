@@ -5,7 +5,7 @@
   var themeSwitcher = document.getElementById('theme-switcher');
 
   //set page dark/light mode to last specified by user or default to light
-  let savedtheme = localStorage.getItem('theme') || 'light-theme';
+  var savedtheme = localStorage.getItem('theme') || 'light-theme';
   document.body.setAttribute('class', savedtheme);
 
 
