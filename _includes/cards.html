@@ -1,4 +1,11 @@
   <div class="card {{ post.preview }}">
+
+    {% if post.preview-image != "none" %}
+      <img class="preview-image" src="{{ post.preview-image }}">
+    {% endif %}
+
+    <div class="post-content">
+
       <h1 class="post-title">
         <a href="{{ post.url | absolute_url }}">
           {{ post.title }}
@@ -6,19 +13,9 @@
       </h1>
 
       <span class="post-date">{{ post.date | date_to_string }}</span>
-
-      {% case post.preview %}
-        {% when "small_card" %}
-          {% assign num_words = 30 %}
-        {% when "wide_card" %}
-          {% assign num_words = 60 %}
-        {% when "large_card" %}
-          {% assign num_words = 180 %}
-        {% when "tall_card" %}
-          {% assign num_words = 90 %}
-        {% else %}
-          {% assign num_words = 30 %}
-      {% endcase %}
       
-      {{ post.content | truncatewords: num_words }}
+        {{ post.content }}
+
+      </div>
+
   </div>
