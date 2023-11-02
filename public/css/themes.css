@@ -23,8 +23,7 @@ body.light-theme .masthead {
 body.light-theme .sidebar a {
   color: #fff;
 }
-body.light-theme p > a,
-body.light-theme .related-posts li a {
+body.light-theme a {
   color: #268bd2;
 }
 body.light-theme .post-title, body.light-theme .page-title .post-title h1 a,
@@ -65,8 +64,7 @@ body.dark-theme .masthead {
 body.dark-theme .sidebar a {
   color: #fff;
 }
-body.dark-theme p > a,
-body.dark-theme .related-posts li a {
+body.dark-theme a {
   color: #BB86FC;
 }
 body.dark-theme .post-title, body.dark-theme .page-title .post-title h1 a,
@@ -94,6 +92,10 @@ body.dark-theme {
 }
 body.dark-theme .message, body.dark-theme blockquote {
   color: #adadad;
+}
+body.dark-theme span.pagination-item {
+  border-color: #7a7a7a;
+  color: #7a7a7a;
 }
 body.dark-theme img {
   filter: brightness(80%);
