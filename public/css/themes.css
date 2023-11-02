@@ -36,7 +36,8 @@ body.light-theme .masthead-title > small, body.light-theme .post-date, body.ligh
 body.light-theme .card, body.light-theme .masthead {
   background-color: #fefdfe;
 }
-body.light-theme {
+body.light-theme, body.light-theme .sidebar-toggle:active:before,
+body.light-theme #sidebar-checkbox:checked ~ .sidebar-toggle::before {
   background-color: #FFFFFF;
 }
 body.light-theme .highlight, body.light-theme .message, body.light-theme blockquote, body.light-theme :not(pre) > code,
@@ -77,7 +78,8 @@ body.dark-theme .masthead-title > small, body.dark-theme .post-date, body.dark-t
 body.dark-theme .card, body.dark-theme .masthead {
   background-color: #403b40;
 }
-body.dark-theme {
+body.dark-theme, body.dark-theme .sidebar-toggle:active:before,
+body.dark-theme #sidebar-checkbox:checked ~ .sidebar-toggle::before {
   background-color: #2d2d2d;
 }
 body.dark-theme .highlight, body.dark-theme .message, body.dark-theme blockquote, body.dark-theme :not(pre) > code,

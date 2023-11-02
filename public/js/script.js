@@ -22,6 +22,7 @@
 
 
   //add listener event to sidebar toggle
+  //uncheck checkbox when clicking outside sidebar
   document.addEventListener('click', function(e) {
     var target = e.target;
 
