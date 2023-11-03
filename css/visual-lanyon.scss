@@ -105,7 +105,7 @@ button {
 .wide_card {
     @include cardsizing(100%, 1, 2rem);
 
-    & > img.preview-image {
+    &:not(.overlayed) > img.preview-image {
         margin: -0.5rem;
         margin-left: 0.5rem;
         margin-bottom: -1rem;
@@ -119,6 +119,33 @@ button {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
+}
+
+.wide_card.overlayed {
+
+    //display:block;
+    text-shadow: 0.05rem 0rem 0.25rem black;
+    color: #e7e7e7;
+
+    & > .preview-image {
+        margin: -0.5rem;
+        margin-bottom: -1rem;
+
+        position: absolute;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .post-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .post-title > a, h1, h2, h3, h4, h5, h6 {
+        color: #e6e6e6;
+        font-size: 2rem;
+    }
+
 }
 
 .large_card {
@@ -139,7 +166,6 @@ button {
 }
 
 .large_card.overlayed {
-    //filter: brightness(80%);
     display:block;
     padding: 0rem;
 
@@ -172,5 +198,9 @@ button {
 
 .tall_card {
     @include cardsizing(33%, 3, 1.5rem);
+}
+
+.square_card {
+    @include cardsizing(50%, 2, 1.5rem);
 }
 
