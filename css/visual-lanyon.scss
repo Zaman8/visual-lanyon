@@ -80,7 +80,7 @@ button {
     }
 }
 
-.overlayed {
+div.overlayed {
 
     //special styling so text is easier to read over image
     text-shadow: 0.05rem 0rem 0.25rem black;
@@ -95,16 +95,26 @@ button {
     }
 
     //image positioning and resizing
-    //be careful to only use images with roughly equal aspect ratios
+    //will center images and crop to card dimensions
 
     display:block;
+    background-position: center;
+
     & > .preview-image {
         margin: -0.5rem;
         margin-bottom: -1rem;
 
+        //will stretch image to fit, but most images are bigger than viewport anyway
         position: absolute;
         min-width: 100%;
         min-height: 100%;
+
+
+        left: 51%;
+        top: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
 
     }
 
@@ -191,7 +201,6 @@ button {
 }
 
 .large_card.overlayed {
-    text-shadow: 0.05rem 0rem 0.25rem black;
     text-align: center;
     font-size: larger;
 
