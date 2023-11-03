@@ -1,5 +1,6 @@
-    <div class="card {{ post.preview }}">
+  <div class="card {{ post.preview }} visual">
     <a href="{{ post.url | absolute_url }}"><span></span></a>
+    <img class="preview-image" src="{{ post.preview-image }}">
 
     <div class="post-content">
 
@@ -11,11 +12,7 @@
 
       <span class="post-date">{{ post.date | date_to_string }}</span>
       
-      {% if post.preview == 'large_card' %}
         {{ post.content }}
-      {% else %}
-        {{ post.excerpt }}
-      {% endif %}
 
       </div>
 
