@@ -36,6 +36,11 @@ button {
     justify-content: space-between;
 }
 
+.post-contents {
+    text-align: inherit;
+    color: inherit;
+}
+
 .card {
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
@@ -57,7 +62,14 @@ button {
     transition: all .2s ease-in-out;
     transform: scale(1);
 
-    display: flex;
+    & > a:first-of-type > span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
 }
 
 @mixin cardsizing($width, $height, $h1size) {
@@ -85,11 +97,37 @@ button {
         border-radius: 0rem;
     }
 
+    display: flex;
     flex-direction: row-reverse;
 }
 
 .large_card {
-    @include cardsizing(100%, 3, 2.5rem);
+    @include cardsizing(100%, 2, 2.5rem);
+
+}
+
+.large_card.visual {
+    //filter: brightness(80%);
+
+    text-shadow: 0.05rem 0rem 0.25rem black;
+    text-align: center;
+    font-size: larger;
+    color: #e7e7e7;
+
+    .post-title > a, h1, h2, h3, h4, h5, h6 {
+        color: #e6e6e6;
+        font-size: 3.5rem;
+    }
+
+    display: flex;
+    justify-content: center;
+
+    & > .post-content {
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
 }
 
 .tall_card {

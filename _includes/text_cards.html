@@ -1,8 +1,5 @@
-  <div class="card {{ post.preview }}">
-
-    {% if post.preview-image != "none" %}
-      <img class="preview-image" src="{{ post.preview-image }}">
-    {% endif %}
+    <div class="card {{ post.preview }}">
+    <a href="{{ post.url | absolute_url }}"><span></span></a>
 
     <div class="post-content">
 

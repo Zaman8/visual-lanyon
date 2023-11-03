@@ -6,7 +6,17 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
 
-    {% include cards.html %}
+    {% if post.preview-image == 'none' %}
+      {% include text_cards.html %}
+    {% else %} 
+
+      {% if post.preview == 'wide_card' %}
+        {% include wide_image_card.html %}
+      {% elsif post.preview == 'large_card' %}
+        {% include large_image_card.html %}
+      {% endif %}
+
+    {% endif %}
 
   {% endfor %}
 </div>

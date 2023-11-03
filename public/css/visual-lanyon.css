@@ -34,6 +34,11 @@ button {
   justify-content: space-between;
 }
 
+.post-contents {
+  text-align: inherit;
+  color: inherit;
+}
+
 .card {
   border-radius: 0.5rem;
   box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
@@ -44,7 +49,6 @@ button {
   text-overflow: "";
   transition: all 0.2s ease-in-out;
   transform: scale(1);
-  display: flex;
 }
 .card post-content {
   margin: 1rem;
@@ -52,6 +56,14 @@ button {
 .card:hover {
   transition: all 0.2s ease-in-out;
   transform: scale(1.02);
+}
+.card > a:first-of-type > span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .small_card {
@@ -65,6 +77,7 @@ button {
 .wide_card {
   width: 66%;
   height: 15rem;
+  display: flex;
   flex-direction: row-reverse;
 }
 .wide_card h1 {
@@ -81,10 +94,29 @@ button {
 
 .large_card {
   width: 100%;
-  height: 45rem;
+  height: 30rem;
 }
 .large_card h1 {
   font-size: 2.5rem;
+}
+
+.large_card.visual {
+  text-shadow: 0.05rem 0rem 0.25rem black;
+  text-align: center;
+  font-size: larger;
+  color: #e7e7e7;
+  display: flex;
+  justify-content: center;
+}
+.large_card.visual .post-title > a, .large_card.visual h1, .large_card.visual h2, .large_card.visual h3, .large_card.visual h4, .large_card.visual h5, .large_card.visual h6 {
+  color: #e6e6e6;
+  font-size: 3.5rem;
+}
+.large_card.visual > .post-content {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .tall_card {
