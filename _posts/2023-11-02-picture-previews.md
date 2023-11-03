@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New Picture Previews
-preview: wide_card
+preview: double_card
 preview-image: https://picsum.photos/400/600/?blur=2
 ---
 
