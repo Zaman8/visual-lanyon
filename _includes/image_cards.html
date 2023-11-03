@@ -1,5 +1,7 @@
-  <div class="card {{ post.preview }} visual" style="background-image: url('{{ post.preview-image }}');">
+    <div class="card {{ post.preview }} {% if post.overlay != false %}overlayed{% endif %}">
     <a href="{{ post.url | absolute_url }}"><span></span></a>
+    <img class="preview-image" src="{{ post.image }}">
+
     <div class="post-content">
 
       <h1 class="post-title">
@@ -9,8 +11,12 @@
       </h1>
 
       <span class="post-date">{{ post.date | date_to_string }}</span>
-
-      {{ post.excerpt }}
+      
+      {% if post.preview == 'large_card' and post.overlay == false %}
+        {{ post.content }}
+      {% else %}
+        {{ post.excerpt }}
+      {% endif %}
 
       </div>
 

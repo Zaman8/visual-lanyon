@@ -2,7 +2,8 @@
 layout: post
 title: Wide Cards
 preview: wide_card
-preview-image: https://picsum.photos/1200/630/
+image: https://picsum.photos/1200/630/
+overlay: false
 ---
 
 ## More Layouts

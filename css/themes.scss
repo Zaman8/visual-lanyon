@@ -8,9 +8,10 @@
  * A secondary color theme is also declared here for the purpose of a dark mode for the website.
  */
 
- #nothing {
+//fix compile errors from front matter
+#nothing {
   color: inherit;
- }
+}
 
  /*Light Mode*/
 $light-background-color: #FFFFFF;

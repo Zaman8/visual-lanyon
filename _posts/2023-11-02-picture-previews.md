@@ -2,7 +2,8 @@
 layout: post
 title: New Picture Previews
 preview: double_card
-preview-image: https://picsum.photos/400/600/
+image: https://picsum.photos/400/600/
+overlay: false
 ---
 
 ## More Visuals!

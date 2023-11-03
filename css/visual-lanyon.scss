@@ -68,13 +68,13 @@ button {
         height: 100%;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 2;
     }
 }
 
 @mixin cardsizing($width, $height, $h1size) {
     width: $width;
-    max-height: calc($height * 15rem);
+    max-height: calc($height * 10rem);
     h1 {
         font-size: $h1size;
     }
@@ -122,13 +122,26 @@ button {
 }
 
 .large_card {
-    @include cardsizing(100%, 2, 2.5rem);
+    @include cardsizing(100%, 3, 2.5rem);
 
+    &:not(.overlayed) > img.preview-image {
+        margin: -0.5rem;
+        margin-bottom: 0;
+
+        width: calc(100% + 1rem);
+        max-height: 40%;
+        border-radius: 0rem;
+
+    }
+
+    display: flex;
+    flex-direction: column;
 }
 
-.large_card.visual {
+.large_card.overlayed {
     //filter: brightness(80%);
-    height: calc(2 * 15rem);
+    display:block;
+    padding: 0rem;
 
     text-shadow: 0.05rem 0rem 0.25rem black;
     text-align: center;
@@ -140,14 +153,20 @@ button {
         font-size: 3.5rem;
     }
 
-    display: flex;
-    justify-content: center;
+    & > .preview-image {
+        position: relative;
+        width: 100%;
+        max-height: 100%;
+    }
 
     & > .post-content {
         position: absolute;
+
+        left: 50%;
         top: 50%;
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 }
 

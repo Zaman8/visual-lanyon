@@ -30,4 +30,4 @@ defaults:
       type: "posts" # previously `post` in Jekyll 2.2.
     values:
       preview: "small_card"
-      preview-image: "none"
+      overlay: true
