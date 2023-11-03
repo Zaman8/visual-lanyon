@@ -14,6 +14,8 @@
       
       {% if post.preview == 'large_card' and post.overlay == false %}
         {{ post.content }}
+      {% elsif post.preview == 'small_card' and post.overlay != false %}
+
       {% else %}
         {{ post.excerpt }}
       {% endif %}
