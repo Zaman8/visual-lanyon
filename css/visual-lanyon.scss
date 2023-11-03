@@ -47,8 +47,8 @@ button {
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 
-    overflow-y: hidden;
-    text-overflow: "";
+    overflow: hidden;
+    text-overflow: "...";
 
     post-content {
         margin: 1rem;
@@ -80,33 +80,57 @@ button {
     }
 }
 
-.small_card {
-    @include cardsizing(33%, 1, 1.5rem);
-}
+.overlayed {
 
-.small_card.overlayed {
-    display:block;
-
+    //special styling so text is easier to read over image
     text-shadow: 0.05rem 0rem 0.25rem black;
     color: #e7e7e7;
 
+    .post-title > a, h1, h2, h3, h4, h5, h6 {
+        color: #e6e6e6;
+    }
+    .post-date {
+        color: #e0e0e0;
+        font-weight: bold;
+    }
+
+    //image positioning and resizing
+    //be careful to only use images with roughly equal aspect ratios
+
+    display:block;
     & > .preview-image {
         margin: -0.5rem;
         margin-bottom: -1rem;
 
         position: absolute;
-        width: 100%;
-        height: 100%;
+        min-width: 100%;
+        min-height: 100%;
+
     }
 
-    .post-content {
+    //make sure post-content preview is above image
+    & > .post-content {
         position: relative;
         z-index: 1;
     }
+}
 
-    .post-title > a, h1, h2, h3, h4, h5, h6 {
-        color: #e6e6e6;
-        font-size: 2rem;
+.small_card {
+    @include cardsizing(33%, 1, 1.5rem);
+}
+
+.small_card.overlayed {
+    height: calc(1 * 10rem);
+    text-align: center;
+
+    & > .post-content {
+        position: absolute;
+
+        left: 50%;
+        top: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
     }
 }
 
@@ -125,35 +149,8 @@ button {
     }
 
     display: flex;
+    justify-content: space-between;
     flex-direction: row-reverse;
-}
-
-.double_card.overlayed {
-
-    display:block;
-
-    text-shadow: 0.05rem 0rem 0.25rem black;
-    color: #e7e7e7;
-
-    & > .preview-image {
-        margin: -0.5rem;
-        margin-bottom: -1rem;
-
-        position: absolute;
-        width: 100%;
-        max-height: 100%;
-    }
-
-    .post-content {
-        position: relative;
-        z-index: 1;
-    }
-
-    .post-title > a, h1, h2, h3, h4, h5, h6 {
-        color: #e6e6e6;
-        font-size: 2rem;
-    }
-
 }
 
 .wide_card {
@@ -175,34 +172,9 @@ button {
     flex-direction: row-reverse;
 }
 
-.wide_card.overlayed {
-
-    text-shadow: 0.05rem 0rem 0.25rem black;
-    color: #e7e7e7;
-
-    & > .preview-image {
-        margin: -0.5rem;
-        margin-bottom: -1rem;
-
-        position: absolute;
-        width: 100%;
-        max-height: 100%;
-    }
-
-    .post-content {
-        position: relative;
-        z-index: 1;
-    }
-
-    .post-title > a, h1, h2, h3, h4, h5, h6 {
-        color: #e6e6e6;
-        font-size: 2rem;
-    }
-
-}
-
 .large_card {
     @include cardsizing(100%, 3, 2.5rem);
+    height: calc(3 * 10rem);
 
     &:not(.overlayed) > img.preview-image {
         margin: -0.5rem;
@@ -219,25 +191,11 @@ button {
 }
 
 .large_card.overlayed {
-    display:block;
-    padding: 0rem;
-
     text-shadow: 0.05rem 0rem 0.25rem black;
     text-align: center;
     font-size: larger;
-    color: #e7e7e7;
 
-    .post-title > a, h1, h2, h3, h4, h5, h6 {
-        color: #e6e6e6;
-        font-size: 3.5rem;
-    }
-
-    & > .preview-image {
-        position: relative;
-        width: 100%;
-        max-height: 100%;
-    }
-
+    display: block;
     & > .post-content {
         position: absolute;
 

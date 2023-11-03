@@ -2,7 +2,7 @@
 layout: post
 title: Double Overlay
 preview: double_card
-image: https://picsum.photos/3000/1024
+image: https://picsum.photos/640/320
 overlay: true
 ---
 

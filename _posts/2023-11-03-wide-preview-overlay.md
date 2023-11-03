@@ -6,4 +6,4 @@ image: https://picsum.photos/3000/1024
 overlay: true
 ---
 
-Super useful for grabbing user's attention or displaying your photography
+Super useful for grabbing user's attention or displaying your photography. This preview can even be used for selection menus.
