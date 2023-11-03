@@ -1,9 +1,16 @@
+---
+---
+
 /*
  * Themes
  *
  * Apply custom color schemes by changing the sidebar background and highlight colors declared here.
  * A secondary color theme is also declared here for the purpose of a dark mode for the website.
  */
+
+ #nothing {
+  color: inherit;
+ }
 
  /*Light Mode*/
 $light-background-color: #FFFFFF;
@@ -12,7 +19,7 @@ $light-card-color: #fefdfe;
 $light-title-color: #303030;
 $light-alt-title-color: #9a9a9a;
 $light-link-color: #268bd2;
-$light-highlight-background: rgba(0, 0, 0, 0.05);//#f9f9f9;
+$light-highlight-background: rgba(0, 0, 0, 0.05);
 
 /*Dark Mode*/
 $dark-background-color: #2d2d2d;
@@ -21,7 +28,7 @@ $dark-card-color: #403b40;
 $dark-title-color: #e6e6e6;
 $dark-alt-title-color: #9a9a9a;
 $dark-link-color: #BB86FC;
-$dark-highlight-background: rgba(0, 0, 0, 0.15); //#2b2b2b;
+$dark-highlight-background: rgba(0, 0, 0, 0.15);
 
 @mixin colorplacements($background-color, $card-color, $highlight-background, $sidebar-color, $title-color, $alt-title-color, $link-color) {
   //Sidebar Color
@@ -80,11 +87,6 @@ $dark-highlight-background: rgba(0, 0, 0, 0.15); //#2b2b2b;
 }
 
 
-
-
-
-
-
 /*
 * Light Mode Color Specifications
 * 
@@ -118,7 +120,7 @@ body.dark-theme {
     color: lighten($dark-background-color, 30%);
   }
 
-  //dynamically darken images while in dark-mode
+  //darken images while in dark-mode
   img {
     filter: brightness(80%)
   }
