@@ -14,6 +14,8 @@ title: Home
         {% include double_image_card.html %}
       {% elsif post.preview == 'large_card' %}
         {% include large_image_card.html %}
+      {% elsif post.preview == 'wide_card' %}
+        {% include wide_image_card.html %}
       {% endif %}
 
     {% endif %}

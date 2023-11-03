@@ -1,11 +1,11 @@
 ---
 layout: post
-title: New Picture Previews
-preview: double_card
-preview-image: https://picsum.photos/400/600/
+title: Wide Cards
+preview: wide_card
+preview-image: https://picsum.photos/1200/630/
 ---
 
-## More Visuals!
+## More Layouts
 Large and wide preview cards can now have an image to go along with it!
 
 >This works will all types of formatting within the post 

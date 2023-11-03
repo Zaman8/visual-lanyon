@@ -1,3 +1,7 @@
+---
+---
+
+
 .theme-switcher {
     position: absolute;
     top: 1.1rem;
@@ -7,8 +11,8 @@
     width: 24px;
 
     .icon {
-        -webkit-mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
-        mask-image: url(/public/theme-os-default.b14255eadab403fa2e8a.svg);
+        -webkit-mask-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"><circle cx="8" cy="8" r="7.25" stroke="%235B5B66" stroke-width="1.5"/><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><circle cx="8" cy="8" r="7.25" fill="%235B5B66" stroke="%235B5B66" stroke-width="1.5"/></mask><g mask="url(%23a)"><path fill="%235B5B66" d="M0 0h8v16H0z"/></g></svg>');
+        mask-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"><circle cx="8" cy="8" r="7.25" stroke="%235B5B66" stroke-width="1.5"/><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><circle cx="8" cy="8" r="7.25" fill="%235B5B66" stroke="%235B5B66" stroke-width="1.5"/></mask><g mask="url(%23a)"><path fill="%235B5B66" d="M0 0h8v16H0z"/></g></svg>');
         mask-repeat: no-repeat;
     }
 }
@@ -36,11 +40,6 @@ button {
     justify-content: space-between;
 }
 
-.post-contents {
-    text-align: inherit;
-    color: inherit;
-}
-
 .card {
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
@@ -53,6 +52,7 @@ button {
 
     post-content {
         margin: 1rem;
+        font-size: smaller;
     }
 
     &:hover {
@@ -74,7 +74,7 @@ button {
 
 @mixin cardsizing($width, $height, $h1size) {
     width: $width;
-    height: calc($height * 15rem);
+    max-height: calc($height * 15rem);
     h1 {
         font-size: $h1size;
     }
@@ -85,10 +85,11 @@ button {
 }
 
 .double_card{
-    @include cardsizing(66%, 1, 2.5rem);
+    @include cardsizing(66%, 1, 2rem);
 
     & > img.preview-image {
         margin: -0.5rem;
+        margin-left: 0.5rem;
         margin-bottom: -1rem;
 
         height: calc(100% + 1.5rem);
@@ -101,6 +102,25 @@ button {
     flex-direction: row-reverse;
 }
 
+.wide_card {
+    @include cardsizing(100%, 1, 2rem);
+
+    & > img.preview-image {
+        margin: -0.5rem;
+        margin-left: 0.5rem;
+        margin-bottom: -1rem;
+
+        height: calc(100% + 1.5rem);
+        width: auto;
+        max-width: 50%;
+        border-radius: 0rem;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
 .large_card {
     @include cardsizing(100%, 2, 2.5rem);
 
@@ -108,6 +128,7 @@ button {
 
 .large_card.visual {
     //filter: brightness(80%);
+    height: calc(2 * 15rem);
 
     text-shadow: 0.05rem 0rem 0.25rem black;
     text-align: center;
