@@ -1,7 +1,36 @@
 ---
 ---
 
+/*
+*  __  __                                ___       __                                                  
+* /\ \/\ \  __                          /\_ \     /\ \                                                 
+* \ \ \ \ \/\_\    ____  __  __     __  \//\ \    \ \ \         __      ___   __  __    ___     ___    
+*  \ \ \ \ \/\ \  /',__\/\ \/\ \  /'__`\  \ \ \    \ \ \  __  /'__`\  /' _ `\/\ \/\ \  / __`\ /' _ `\  
+*   \ \ \_/ \ \ \/\__, `\ \ \_\ \/\ \L\.\_ \_\ \_   \ \ \L\ \/\ \L\.\_/\ \/\ \ \ \_\ \/\ \L\ \/\ \/\ \ 
+*    \ `\___/\ \_\/\____/\ \____/\ \__/.\_\/\____\   \ \____/\ \__/.\_\ \_\ \_\/`____ \ \____/\ \_\ \_\
+*     `\/__/  \/_/\/___/  \/___/  \/__/\/_/\/____/    \/___/  \/__/\/_/\/_/\/_/`/___/> \/___/  \/_/\/_/
+*                                                                                 /\___/               
+*                                                                                 \/__/                
+*                                                                                                     
+* Written by @ZaMan8 and distrobuted under the MIT license.
+* Learn more at https://github.com/Zaman8/visual-lanyon 
+*
+*
+* Contents:
+* 
+* Color Theme Button
+* Preview Cards
+*/                                                                                                     
+                                                                                                     
 
+/*
+* Color Theme Button
+*
+* Style the button used to toggle between light and dark color themes
+*/
+
+
+//set position of button in top right corner
 .theme-switcher {
     position: absolute;
     top: 1.1rem;
@@ -10,6 +39,7 @@
     height: 24px;
     width: 24px;
 
+    //set svg as mask (allowing us to change the color depending on the state)
     .icon {
         -webkit-mask-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"><circle cx="8" cy="8" r="7.25" stroke="%235B5B66" stroke-width="1.5"/><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><circle cx="8" cy="8" r="7.25" fill="%235B5B66" stroke="%235B5B66" stroke-width="1.5"/></mask><g mask="url(%23a)"><path fill="%235B5B66" d="M0 0h8v16H0z"/></g></svg>');
         mask-image: url('data:image/svg+xml,<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"><circle cx="8" cy="8" r="7.25" stroke="%235B5B66" stroke-width="1.5"/><mask id="a" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><circle cx="8" cy="8" r="7.25" fill="%235B5B66" stroke="%235B5B66" stroke-width="1.5"/></mask><g mask="url(%23a)"><path fill="%235B5B66" d="M0 0h8v16H0z"/></g></svg>');
@@ -17,6 +47,7 @@
     }
 }
 
+//place the svg within the button
 .icon {
     display: block;
     left: 0;
@@ -26,6 +57,8 @@
     position: absolute;
 }
 
+//override global default styling of buttons
+//make button invisible so only svg icon is shown
 button {
     background: none;
     border: none;
@@ -34,27 +67,41 @@ button {
 
 }
 
+
+/*
+* Preview Cards
+*
+* Creates base reusable styling for cards and defines styles to create new card layouts
+* different cards only differ in width, height, and font size.
+* Some cards use different non-overlayed image locations, so those stylings are define individually later.
+*/
+
+
+//set div display to flexbox and center cards
 .posts {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+//reusable common card styling, creates shape, animation, color, and clickability
 .card {
+    //create shadow, rounded edges, and space out cards. Hide any overflow
     border-radius: 0.5rem;
     box-shadow: 0.05rem 0rem 0.25rem 0.3rem rgba(0, 0, 0, 0.05);
+
     padding: 0.5rem;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
 
     overflow: hidden;
-    text-overflow: "...";
 
     post-content {
         margin: 1rem;
         font-size: smaller;
     }
 
+    //create animation to 'elevate' card on hover
     &:hover {
         transition: all .2s ease-in-out; 
         transform: scale(1.02); 
@@ -62,6 +109,7 @@ button {
     transition: all .2s ease-in-out;
     transform: scale(1);
 
+    //make card a clickable link by placing a linked span in front of it
     & > a:first-of-type > span {
         position: absolute;
         width: 100%;
@@ -72,14 +120,8 @@ button {
     }
 }
 
-@mixin cardsizing($width, $height, $h1size) {
-    width: $width;
-    max-height: calc($height * 10rem);
-    h1 {
-        font-size: $h1size;
-    }
-}
 
+//reused code to set the card background as an image when specified in the post front matter
 div.overlayed {
 
     //special styling so text is easier to read over image
@@ -111,7 +153,8 @@ div.overlayed {
         min-width: 100%;
         min-height: 100%;
 
-
+        //place card in center so when overflowed we see the center of the image
+        //not sure why left must be 51% and not 50
         left: 51%;
         top: 50%;
         -webkit-transform: translate(-50%,-50%);
@@ -133,17 +176,47 @@ div.overlayed {
 * since small and large cards center their text when overlayed another (card).overlay styling is here
 */
 
-.small_card {
-    @include cardsizing(33%, 1, 1.5rem);
+//mixin to define individual card differences.
+//use an informal row height of 10rem and define card heights as integer multiples of this.
+@mixin cardsizing($width, $height, $h1size) {
+    width: $width;
+    max-height: calc($height * 10rem);
+    h1 {
+        font-size: $h1size;
+    }
 }
 
-.small_card.overlayed {
-    height: calc(1 * 10rem);
-    text-align: center;
 
+//extended selectors to create two column card layout when no image overlay. 
+//Places content left, and image right
+%two-column {
+    //put image on right when not overlayed
+    &:not(.overlayed) > img.preview-image {
+        margin: -0.5rem;
+        margin-left: 0.5rem;
+        margin-bottom: -1rem;
+
+        //scale image to match the height of the card, width adjusts within max range
+        height: calc(100% + 1.5rem);
+        width: auto;
+        max-width: 50%;
+        border-radius: 0rem;
+    }
+
+     //create flexbox to shrink content and image to fit in card
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse; //ensures picture is on right. row would place on left
+}
+
+//Extended selector for cards that center text when image is overlayed
+%centered-overlay {
+    height: 90rem; //set extremely hight height to force use of max-height defined in card styling
+    
+    //center text horizontally and vertically within card
+    text-align: center;
     & > .post-content {
         position: absolute;
-
         left: 50%;
         top: 50%;
         -ms-transform: translate(-50%, -50%);
@@ -152,48 +225,34 @@ div.overlayed {
     }
 }
 
+/*
+* Start defining individual card layouts
+* Uses class .overlayed to style content differently when necassary
+*/
+
+.small_card {
+    @include cardsizing(33%, 1, 1.5rem);
+
+    &.overlayed {
+        //place text in center of card when overlayed
+        @extend %centered-overlay;
+    }
+}
+
 .double_card{
     @include cardsizing(66%, 1, 2rem);
-
-    &:not(.overlayed) > img.preview-image {
-        margin: -0.5rem;
-        margin-left: 0.5rem;
-        margin-bottom: -1rem;
-
-        height: calc(100% + 1.5rem);
-        width: auto;
-        max-width: 50%;
-        border-radius: 0rem;
-    }
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    @extend %two-column;
 }
 
 .wide_card {
     @include cardsizing(100%, 1, 2rem);
-
-    &:not(.overlayed) > img.preview-image {
-        margin: -0.5rem;
-        margin-left: 0.5rem;
-        margin-bottom: -1rem;
-
-        height: calc(100% + 1.5rem);
-        width: auto;
-        max-width: 50%;
-        border-radius: 0rem;
-    }
-
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row-reverse;
+    @extend %two-column;
 }
 
 .large_card {
     @include cardsizing(100%, 3, 2.5rem);
-    height: calc(3 * 10rem);
 
+    //when not overlaying image put image across the top
     &:not(.overlayed) > img.preview-image {
         margin: -0.5rem;
         margin-bottom: 0;
@@ -204,26 +263,18 @@ div.overlayed {
 
     }
 
+    //create flexbox to shrink and place content and image correctly
     display: flex;
     flex-direction: column;
-}
 
-.large_card.overlayed {
-    text-align: center;
-    font-size: larger;
-
-    display: block;
-    & > .post-content {
-        position: absolute;
-
-        left: 50%;
-        top: 50%;
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        z-index: 1;
+    &.overlayed {
+        //center and enlarge text when overlayed
+        font-size: larger;
+        @extend %centered-overlay;
     }
 }
 
+//cards currently in development
 .tall_card {
     @include cardsizing(33%, 3, 1.5rem);
 }
