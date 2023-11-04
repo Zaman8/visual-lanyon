@@ -6,4 +6,4 @@ image: https://picsum.photos/720
 overlay: true
 ---
 
-Have a small card to intrigue users.
+An example of a small card that focuses on image over content. Useful for a dense but appeal home page. 

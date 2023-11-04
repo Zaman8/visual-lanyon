@@ -91,7 +91,6 @@ div.overlayed {
     }
     .post-date {
         color: #e0e0e0;
-        font-weight: bold;
     }
 
     //image positioning and resizing
@@ -101,6 +100,9 @@ div.overlayed {
     background-position: center;
 
     & > .preview-image {
+        //apply image filters to help readability
+        filter:brightness(75%);
+
         margin: -0.5rem;
         margin-bottom: -1rem;
 
@@ -124,6 +126,12 @@ div.overlayed {
         z-index: 1;
     }
 }
+
+/*
+* Specific Card Layouts
+* apply individual stylings to create the different sized cards in this theme
+* since small and large cards center their text when overlayed another (card).overlay styling is here
+*/
 
 .small_card {
     @include cardsizing(33%, 1, 1.5rem);
@@ -190,7 +198,7 @@ div.overlayed {
         margin: -0.5rem;
         margin-bottom: 0;
 
-        width: calc(100% + 1rem);
+        min-width: 100%;
         max-height: 40%;
         border-radius: 0rem;
 
