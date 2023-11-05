@@ -12,10 +12,12 @@
 
       <span class="post-date">{{ post.date | date_to_string }}</span>
       
+
+      <!-- Determine how much supplementary text to include in preview -->
       {% if post.preview == 'large_card' and post.overlay == false %}
         {{ post.content }}
       {% elsif post.preview == 'small_card' and post.overlay != false %}
-
+        <!-- don't include any supplementary text in this case-->
       {% else %}
         {{ post.excerpt }}
       {% endif %}
