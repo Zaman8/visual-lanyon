@@ -96,8 +96,7 @@ button {
 
     overflow: hidden;
 
-    post-content {
-        margin: 1rem;
+    .post-content {
         font-size: smaller;
     }
 
@@ -181,7 +180,7 @@ div.overlayed {
 @mixin cardsizing($width, $height, $h1size) {
     width: calc($width - 1rem); //subtract 1 rem to account for card margins
     max-height: calc($height * 10rem);
-    h1 {
+    & > h1 {
         font-size: $h1size;
     }
 }
