@@ -5,16 +5,20 @@
   var themeSwitcher = document.getElementById('theme-switcher');
 
   //set page dark/light mode to last specified by user or use prefers-colors-theme
-  var settheme = 'light-theme';
-  //determine if user set theme themselves
-  if(localStorage.getItem('theme') === null) {
-    //if no user specified check if they have a prefers-color-scheme of dark
+  let settheme = 'light-theme';
+  let savedtheme = localStorage.getItem('theme');
+
+  //If there is a saved theme used that
+  //also need to ensure that the saved theme is a valid option before use
+  if(savedtheme != null && (savedtheme === 'light-theme' || savedtheme === 'dark-theme')) {
+    //ensure that the saved theme is a valid option before use
+    settheme = savedtheme;
+  } else {
+    //if no saved theme attempt to use user broswer preference
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       settheme = 'dark-theme';
     } 
-  } else {
-    //if user has specified a theme use that
-    settheme = localStorage.getItem('theme');
+    //if no browser preference default to light-theme
   }
 
   //set page theme
