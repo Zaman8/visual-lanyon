@@ -6,7 +6,11 @@ title: Home
 <div class="posts">
   {% for post in paginator.posts %}
 
-    {% include cards.html %}
+    {% unless post.image %}
+      {% include text_cards.html %}
+    {% else %} 
+      {% include image_cards.html %}
+    {% endunless %}
 
   {% endfor %}
 </div>
