@@ -6,6 +6,7 @@ url:                 ''
 baseurl:             ''
 paginate:            5
 permalink:           pretty
+rss-link:            false
 
 # About/contact
 author:
@@ -16,6 +17,7 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
+  - jekyll-feed
 
 # Custom vars
 version:             0.2.0
