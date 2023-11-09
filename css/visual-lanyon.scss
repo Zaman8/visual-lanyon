@@ -73,11 +73,18 @@ button {
 * Create display of user's social media links
 */
 
+.about {
+    position: relative;
+    top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 #social-media-icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    margin-top: 1rem;
 
     img {
         height: 1.5rem;
@@ -86,6 +93,23 @@ button {
     }
 }
 
+/*
+* Auther About Section
+*
+* Display short bio of author in sidebar
+*/
+
+#author-about {
+    margin: 1rem;
+
+    img {
+        height: 6rem;
+        width: 6rem;
+        border-width: 0.5rem;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+}
 
 /*
 * Preview Cards
