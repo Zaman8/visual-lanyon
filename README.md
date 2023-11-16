@@ -7,8 +7,9 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon) focused on 
 
 - [Usage](#usage)
 - [Options](#options)
-  - [Themes](#themes)
   - [Analytics](#analytics)
+  - [Themes](#themes)
+  - [Bio](#bio)
 - [Author](#author)
 - [License](#license)
 
@@ -21,6 +22,10 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon), which itse
 ## Options
 
 Visual-Lanyon includes some customizable options, typically applied via classes on the `<body>` element. To understand more about customizing Visual-Lanyon, with the exception of color themes, see (https://github.com/poole/lanyon#readme).
+
+### Analytics
+
+Visual Lanyon addes the ability to track analytics using [GoatCounter](https://www.goatcounter.com/), an open-source web analytics platform that is privacy friendly. GoatCounter can easily be set up by creating an account [here](https://www.goatcounter.com/signup) and providing your GoatCounter code in the configs file. To use Google Analytics see the documentation from [Lanyon](https://github.com/poole/lanyon)
 
 ### Themes
 
@@ -38,11 +43,28 @@ $link-color: #268bd2;
 
 If you are unfamiliar with SASS see [their documentation](https://sass-lang.com/documentation/) for more information. 
 
-### Analytics
+### Bio
 
-Visual Lanyon addes the ability to track analytics using [GoatCounter](https://www.goatcounter.com/), an open-source web analytics platform that is privacy friendly. GoatCounter can easily be set up by creating an account [here](https://www.goatcounter.com/signup) and providing your GoatCounter code in the configs file.
+Author biographic information can be included in the sidebar by configuring _config.yml. This information includes author name, profile pic, and short about section. This section can be omitted by having empty values for *both* author name and profile pic.
+The relevant sections of the config file are:
 
-GoatCounter is very versitale. It is able to use Javascript trackers (as provided in this theme), tracking pixels, or server logs. Additionally, tracking can be self-hosted for those looking to gain more control over how data is collected. Check out their [Documentation](https://www.goatcounter.com/help/start) to learn more. Credit to [Martin Tournojj](https://github.com/arp242) for creating such an awesome tool!
+```yml
+# About/contact
+author:
+  name: Author Name       
+  pic:  https://as2.ftcdn.net/v2/jpg/05/86/91/55/1000_F_586915596_gPqgxPdgdJ4OXjv6GCcDWNxTjKDWZ3JD.jpg          
+  about: 'A short bio about you, the author'
+```
+
+In addition social media links can included below the author bio section. These links are configured in the _data/social-media.yml file. Presets for email, Github, LinkedIn, Twitter, Facebook, Instagram, Youtube, Twitch, Discord are included in the file. To omit a site simply leave an empty value for ID. Additional social media links can be configured using the basic format below.
+
+```yml
+NetworkName:
+  id: 'your-Username-or-ID'
+  href: 'link to site / profile /' #id will be appended to this to create the final link
+  title: 'Name of Network'
+  icon: 'display icon svg'
+```
 
 
 ## Author
