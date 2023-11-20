@@ -21,7 +21,7 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon), which itse
 
 ## Options
 
-Visual-Lanyon includes some customizable options, typically applied via classes on the `<body>` element. To understand more about customizing Visual-Lanyon, with the exception of color themes, see (https://github.com/poole/lanyon#readme).
+Visual-Lanyon adds several new customization options to Lanyon's customization options. These options are typically configured within the _config.yml file. These options are detailed below. To see more about Lanyon's options see (https://github.com/poole/lanyon#readme).
 
 ### Analytics
 
@@ -29,19 +29,43 @@ Visual Lanyon addes the ability to track analytics using [GoatCounter](https://w
 
 ### Themes
 
-Themes control the feel of Visual-Lanyon by changing the color schemes. Themes can control the sidebar background color, hyper-text link color, and post title color.
+Themes control the feel of Visual-Lanyon by changing the color of various elements. Visual-Lanyon supports two themes, light and dark, that can each seperately be fully configured.
+Themes specify:
+- Background Color
+- Sidebar Color
+- Card (Background) Color
+- Title Text Color
+- Secondary Title Text Color
+- Link Color
+- Quote Block Background Color
 
-Unlike Lanyon, Visual-Lanyon moves away from themes from being specified as a class in \<body\>. Rather, these values are controlled by $side-background-color, $title-color, and $link-color in the scss/themes.scss files. Colors may be specified by Hex, RGB, or HTML color codes. <br>
+Unlike Lanyon, Visual-Lanyon moves away from themes from being specified as a class in \<body\>. Rather, color values are specified in scss/themes.scss. Colors may be specified by Hex, RGB, or HTML color codes. <br>
 
 Visual-Lanyon ships with these defaults:
 
+Light Theme:
 ```scss
-$sidebar-background-color: #4b4b4b;
-$title-color: #303030;
-$link-color: #268bd2;
+$light-background-color: #FFFFFF;
+$light-sidebar-color: #4b4b4b;
+$light-card-color: #fefdfe;
+$light-title-color: #303030;
+$light-alt-title-color: #9a9a9a;
+$light-link-color: #268bd2;
+$light-highlight-background: rgba(0, 0, 0, 0.05);
 ```
 
-If you are unfamiliar with SASS see [their documentation](https://sass-lang.com/documentation/) for more information. 
+Dark Theme:
+```scss
+$dark-background-color: #2d2d2d;
+$dark-sidebar-color: #BB86FC;
+$dark-card-color: #403b40;
+$dark-title-color: #e6e6e6;
+$dark-alt-title-color: #9a9a9a;
+$dark-link-color: #BB86FC;
+$dark-highlight-background: rgba(0, 0, 0, 0.15);
+```
+
+Color values are stored as SASS variables at the begining of css/themes.scss. If you are unfamiliar with SASS see [their documentation](https://sass-lang.com/documentation/) for more information. 
 
 ### Bio
 
