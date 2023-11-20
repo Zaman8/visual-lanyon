@@ -7,7 +7,7 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon) focused on 
 
 - [Usage](#usage)
 - [Cards](#cards)
-  - [Card Placement](#cardplacement)
+  - [Card Placement](#card-placement)
 - [Options](#options)
   - [Analytics](#analytics)
   - [Themes](#themes)
@@ -70,6 +70,10 @@ overlay: true
 ```
 
 ### Card Placement
+
+By default only 10 cards are shown on each page, this can be changed by replacing the value for paginate in _config.yml. 
+
+Visual-Lanyon may be used to visually approximate the currently under-development Masonry grid standard in CSS. However, in order to avoid costly Javascript while remaining widely supported, cards are placed left to right, top to bottom across the home page, with the most recent cards being placed first. Cards take up a set amount of space, determined by their type, and subsequent cards are pushed to accomodate this space. This may lead to wacky placing when not carefully selecting card types, so depending on the desired style may be best to only use one or two card styles for posts. 
 
 
 ## Options
