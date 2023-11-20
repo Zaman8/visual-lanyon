@@ -6,6 +6,8 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon) focused on 
 ## Contents
 
 - [Usage](#usage)
+- [Cards](#cards)
+  - [Card Placement](#cardplacement)
 - [Options](#options)
   - [Analytics](#analytics)
   - [Themes](#themes)
@@ -17,6 +19,57 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon) focused on 
 ## Usage
 
 Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon), which itself is built on top of [Poole](https://github.com/poole/poole). Poole provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+
+## Cards
+
+Visual-Lanyon creates a more browsable, image oriented, and modern homepage compared to Lanyon. The main component of this homepage are 'Cards'. Cards typically are self-contained previews of your posts, which contain the post title, date, excerpt, and optionally an image. Think of pinterest. 
+
+Visual-Lanyon provides multiple card presets. The style of card can be specified in the front-matter of each post, or a default may be specified in _config.yml. 
+The provided card presets are:
+- small
+- double
+- wide
+- large
+- tall
+- square
+
+Preview images (placed within each card) are specified within the front-matter of each post by specifing a resource location in the 'image' field. If the 'image' field is left blank then no preview image is displayed. Lastly, preview images can either be displayed adjacent to the post excerpt, or as the background of the card. This option is specified within the 'overlay' field. Examples of correctly formated double cards and their corresponding output are shown below:
+
+Double Wide - No Image
+_post.md_
+```yml
+---
+layout: post
+title: Double Overlay
+preview: double_card
+---
+```
+
+Double Wide - Adjacent Image
+_post.md_
+```yml
+---
+layout: post
+title: Double Overlay
+preview: double_card
+image: https://picsum.photos/640/320
+overlay: false
+---
+```
+
+Double Wide - Overlayed Image
+_post.md_
+```yml
+---
+layout: post
+title: Double Overlay
+preview: double_card
+image: https://picsum.photos/640/320
+overlay: true
+---
+```
+
+### Card Placement
 
 
 ## Options
