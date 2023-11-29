@@ -1,0 +1,55 @@
+#comment out the value for id to exclude a sm link
+
+email:
+  id: 'your.name@yoursite.com'
+  href: 'mailto:'
+  title: 'Email'
+  icon: email.svg
+
+github:
+  id: 'your-github-username'
+  href: 'https://github.com/'
+  title: 'GitHub'
+  icon: github.svg
+
+linkedin:
+  id: 'your-linkedin-username'
+  href: 'https://www.linkedin.com/in/'
+  title: LinkedIn
+  icon: linkedin.svg
+
+twitter:
+  id: 'your-twitter-name'
+  href: 'https://www.twitter.com/'
+  title: 'Twitter'
+  icon: twitter.svg
+
+facebook:
+  id: 'your-facebook-username'
+  href: 'https://www.facebook.com/'
+  title: 'Facebook'
+  icon: facebook.svg
+
+instagram:
+  id: 'your-instagram-username'
+  href: 'https://www.instagram.com/'
+  title: 'Instagram'
+  icon: instagram.svg
+
+youtube:
+  id: 'your-youtube-channel'
+  href: 'https://www.youtube.com/@'
+  title: 'YouTube'
+  icon: youtube.svg
+
+twitch:
+  id: 'your-twitch-account'
+  href: 'https://www.twitch.tv/'
+  title: 'Twitch'
+  icon: twitch.svg
+
+discord:
+  id: 'your-discord-ID'
+  href: 'https://www.discordapp.com/users/'
+  title: 'Discord'
+  icon: discord.svg

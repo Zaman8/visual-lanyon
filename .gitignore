@@ -3,6 +3,7 @@ _gh_pages
 _site
 .ruby-version
 .jekyll-cache
+Gemfile.lock
 
 # Numerous always-ignore extensions
 *.diff
@@ -16,6 +17,7 @@ _site
 *.vi
 *~
 *.lock
+
 
 
 # OS or Editor folders

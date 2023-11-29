@@ -18,20 +18,33 @@
 *
 * Contents:
 * 
-* Color Theme Button
+* Masthead Buttons
+* Social Media Links
+* Author About Section
 * Preview Cards
 */                                                                                                     
                                                                                                      
 
 /*
-* Color Theme Button
+* Masthead Buttons
 *
-* Style the button used to toggle between light and dark color themes
+* Style rss and light-theme buttons on masthead
 */
 
+.icon {
+    //place the svg within the button
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+//Theme Switcher Button
 
 //set position of button in top right corner
-.theme-switcher {
+#theme-switcher {
     position: absolute;
     top: 1.1rem;
     right: 1rem;
@@ -47,14 +60,19 @@
     }
 }
 
-//place the svg within the button
-.icon {
-    display: block;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
+#rss-feed {
     position: absolute;
+    top: 1.1rem;
+    right: 3rem;
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+
+    .icon {
+        -webkit-mask-image: url('/assets/site/rss-solid.svg');
+        mask-image: url('/assets/site//rss-solid.svg');
+        mask-repeat: no-repeat;
+    }
 }
 
 //override global default styling of buttons
@@ -67,6 +85,49 @@ button {
 
 }
 
+/*
+* Social Media Links
+*
+* Create display of user's social media links
+*/
+
+.about {
+    position: relative;
+    top: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+#social-media-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+
+    img {
+        height: 1.5rem;
+        width: 1.5rem;
+        margin: 0.5rem;
+    }
+}
+
+/*
+* Auther About Section
+*
+* Display short bio of author in sidebar
+*/
+
+#author-about {
+    margin: 1rem;
+
+    img {
+        height: 6rem;
+        width: 6rem;
+        border-width: 0.5rem;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+}
 
 /*
 * Preview Cards

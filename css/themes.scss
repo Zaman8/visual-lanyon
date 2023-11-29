@@ -45,10 +45,11 @@ $dark-highlight-background: rgba(0, 0, 0, 0.15);
     border-color: $sidebar-color;
   }
 
-  .sidebar a {
+  .sidebar a, #author-about h1, #author-about h4 {
     color: #fff;
   }
 
+  //author about text color (on sidebar)
   //Highlight link color
   a {
     color: $link-color;

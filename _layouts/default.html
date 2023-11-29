@@ -17,6 +17,13 @@
             <small>{{ site.tagline }}</small>
           </h3>
         </div>
+        {% if site.rss-link == true %}
+        <label>
+          <a href="{{ site.baseurl }}/feed.xml" id="rss-feed">
+            <span class="button-wrap icon"></span>
+          </a>
+        </label>
+        {% endif %}
         <label>
           <button class="button theme-switcher" id="theme-switcher" type="button">
             <span class="button-wrap icon"></span>
