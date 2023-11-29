@@ -2,8 +2,8 @@
 title:               Visual-Lanyon
 tagline:             'A Jekyll theme'
 description:         ''
-url:                 ''
-baseurl:             ''
+url:                 'https://zaman8.github.io/'
+baseurl:             'visual-lanyon/'
 paginate:            10
 permalink:           pretty
 rss-link:            false
@@ -22,7 +22,7 @@ plugins:
 # Custom vars
 version:             0.6.0
 google_analytics_id: #UA-XXXX-Y
-goatcounter_code: #id
+goatcounter_code: zaman8
 
 #Define post default options
 defaults:
