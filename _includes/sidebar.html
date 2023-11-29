@@ -58,7 +58,7 @@
         {% assign key = entry | first %}
         {% if sm[key].id %}
           <a href="{{ sm[key].href }}{{ sm[key].id }}" title="{{ sm[key].title }}"><img
-            src="{{ site.baseurl }}/assets/site/brand_svg/{{sm[key].icon}}" /></a>
+            src="{{ site.url }}/{{ site.baseurl }}/assets/site/brand_svg/{{sm[key].icon}}" /></a>
         {% endif %}
       {% endfor %}
     </div>
