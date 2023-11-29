@@ -16,6 +16,8 @@ Gemfile.lock
 *.zip
 *.vi
 *~
+*.lock
+
 
 
 # OS or Editor folders

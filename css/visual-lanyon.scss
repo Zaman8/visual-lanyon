@@ -51,7 +51,6 @@
     cursor: pointer;
     height: 24px;
     width: 24px;
-    
 
     //set svg as mask (allowing us to change the color depending on the state)
     .icon {
@@ -75,7 +74,6 @@
         mask-repeat: no-repeat;
     }
 }
-
 
 //override global default styling of buttons
 //make button invisible so only svg icon is shown
