@@ -1,0 +1,110 @@
+/*
+ * Themes
+ *
+ * Apply custom color schemes by changing the sidebar background and highlight colors declared here.
+ * A secondary color theme is also declared here for the purpose of a dark mode for the website.
+ */
+#nothing {
+  color: inherit;
+}
+
+/*Light Mode*/
+/*Dark Mode*/
+/*
+* Light Mode Color Specifications
+* 
+*/
+body.light-theme .sidebar,
+body.light-theme .sidebar-toggle:active,
+body.light-theme .sidebar-toggle::before,
+body.light-theme #sidebar-checkbox:checked ~ .sidebar-toggle, body.light-theme .icon {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #4b4b4b;
+}
+body.light-theme .masthead {
+  border-color: #4b4b4b;
+}
+body.light-theme .sidebar a, body.light-theme #author-about h1, body.light-theme #author-about h4 {
+  color: #fff;
+}
+body.light-theme a {
+  color: #268bd2;
+}
+body.light-theme .post-title, body.light-theme .page-title .post-title h1 a,
+body.light-theme .masthead-title, body.light-theme .masthead-title > a, body.light-theme h1 > a, body.light-theme h1, body.light-theme h2, body.light-theme h3, body.light-theme h4, body.light-theme h5, body.light-theme h6 {
+  color: #303030;
+}
+body.light-theme .masthead-title > small, body.light-theme .post-date, body.light-theme .related-posts li small {
+  color: #9a9a9a;
+}
+body.light-theme .card, body.light-theme .masthead {
+  background-color: #fefdfe;
+}
+body.light-theme, body.light-theme .sidebar-toggle:active:before,
+body.light-theme #sidebar-checkbox:checked ~ .sidebar-toggle::before {
+  background-color: #FFFFFF;
+}
+body.light-theme .highlight, body.light-theme .message, body.light-theme blockquote, body.light-theme :not(pre) > code,
+body.light-theme tbody tr:nth-child(odd) td, body.light-theme tbody tr:nth-child(odd) th {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+body.light-theme blockquote {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/*
+* Dark Mode Color Specifications
+* 
+*/
+body.dark-theme .sidebar,
+body.dark-theme .sidebar-toggle:active,
+body.dark-theme .sidebar-toggle::before,
+body.dark-theme #sidebar-checkbox:checked ~ .sidebar-toggle, body.dark-theme .icon {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #BB86FC;
+}
+body.dark-theme .masthead {
+  border-color: #BB86FC;
+}
+body.dark-theme .sidebar a, body.dark-theme #author-about h1, body.dark-theme #author-about h4 {
+  color: #fff;
+}
+body.dark-theme a {
+  color: #BB86FC;
+}
+body.dark-theme .post-title, body.dark-theme .page-title .post-title h1 a,
+body.dark-theme .masthead-title, body.dark-theme .masthead-title > a, body.dark-theme h1 > a, body.dark-theme h1, body.dark-theme h2, body.dark-theme h3, body.dark-theme h4, body.dark-theme h5, body.dark-theme h6 {
+  color: #e6e6e6;
+}
+body.dark-theme .masthead-title > small, body.dark-theme .post-date, body.dark-theme .related-posts li small {
+  color: #9a9a9a;
+}
+body.dark-theme .card, body.dark-theme .masthead {
+  background-color: #403b40;
+}
+body.dark-theme, body.dark-theme .sidebar-toggle:active:before,
+body.dark-theme #sidebar-checkbox:checked ~ .sidebar-toggle::before {
+  background-color: #2d2d2d;
+}
+body.dark-theme .highlight, body.dark-theme .message, body.dark-theme blockquote, body.dark-theme :not(pre) > code,
+body.dark-theme tbody tr:nth-child(odd) td, body.dark-theme tbody tr:nth-child(odd) th {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+body.dark-theme blockquote {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+body.dark-theme {
+  color: #e7e7e7;
+}
+body.dark-theme .message, body.dark-theme blockquote {
+  color: #adadad;
+}
+body.dark-theme span.pagination-item {
+  border-color: #7a7a7a;
+  color: #7a7a7a;
+}
+body.dark-theme img {
+  filter: brightness(80%);
+}
+
+/*# sourceMappingURL=themes.css.map */
