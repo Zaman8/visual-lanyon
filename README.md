@@ -35,7 +35,7 @@ The provided card presets are:
 
 Preview images (placed within each card) are specified within the front-matter of each post by specifing a resource location in the 'image' field. If the 'image' field is left blank then no preview image is displayed. Lastly, preview images can either be displayed adjacent to the post excerpt, or as the background of the card. This option is specified within the 'overlay' field. Examples of correctly formated double cards and their corresponding output are shown below:
 
-Double Wide - No Image
+#### Double Wide - No Image  
 _post.md_
 ```yml
 ---
@@ -44,8 +44,9 @@ title: Double Overlay
 preview: double_card
 ---
 ```
+<img src="assets/docs/double_no_pic.png" alt="only content" width="500"/>
 
-Double Wide - Adjacent Image
+#### Double Wide - Adjacent Image  
 _post.md_
 ```yml
 ---
@@ -56,8 +57,10 @@ image: https://picsum.photos/640/320
 overlay: false
 ---
 ```
+<img src="assets/docs/double_adjacent_pic.png" alt="only content" width="500"/>
 
-Double Wide - Overlayed Image
+
+#### Double Wide - Overlayed Image  
 _post.md_
 ```yml
 ---
@@ -68,6 +71,8 @@ image: https://picsum.photos/640/320
 overlay: true
 ---
 ```
+<img src="assets/docs/double_overlay_pic.png" alt="only content" width="500"/>
+
 
 ### Card Placement
 
