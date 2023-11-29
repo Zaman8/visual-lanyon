@@ -20,7 +20,7 @@ Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon) focused on 
 
 ## Usage
 
-Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon), which itself is built on top of [Poole](https://github.com/poole/poole). Poole provides a fully furnished Jekyll setup—just download and start the Jekyll server. See [the Poole usage guidelines](https://github.com/poole/poole#usage) for how to install and use Jekyll.
+To deploy Visual-Lanyon just download and build the site using Jekyll. Unfortunately, if you are deploying on Github it is not yet possible to use SASS when building the site. Therefore, it is recommended to either download and build the site locally or to replace 'themes.scss', visual-Lanyon.scss', and 'lanyon.scss' with their compiled css counterparts. These can be generated locally after making changes, or if using out-of-the-box cloning the gh-pages branch will contained these pre-compiled files. 
 
 ## Cards
 
@@ -53,7 +53,7 @@ _post.md_
 ```yml
 ---
 layout: post
-title: Double Overlay
+title: New Picture Previews!
 preview: double_card
 image: https://picsum.photos/640/320
 overlay: false
