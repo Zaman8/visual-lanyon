@@ -2,6 +2,8 @@
 
 Visual-Lanyon is a fork of [Lanyon](https://github.com/poole/lanyon) focused on redesigning the home page to create a more visuals-oriented experience. Visual Lanyon is a [Jekyll](http://jekyllrb.com) theme that provides a highly-specified home page layout without added complexity. For ease of reading only features that have been added or changed from Lanyon are detailed here. See [Lanyon's Documentation](https://github.com/poole/lanyon#usage) for more about how to get started. 
 
+![](assets/docs/light_theme_full_page.png)
+
 
 ## Contents
 
