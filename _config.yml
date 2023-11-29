@@ -3,7 +3,7 @@ title:               Visual-Lanyon
 tagline:             'A Jekyll theme'
 description:         ''
 url:                 'https://zaman8.github.io/'
-baseurl:             'visual-lanyon/'
+baseurl:             '/visual-lanyon'
 paginate:            10
 permalink:           pretty
 rss-link:            false
